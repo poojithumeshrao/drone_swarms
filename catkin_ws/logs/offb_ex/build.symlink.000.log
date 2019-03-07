@@ -1,0 +1,7 @@
+Symlinking /home/poojith/catkin_ws/devel/lib/python2.7/dist-packages/offb_ex/__init__.py
+Symlinking /home/poojith/catkin_ws/devel/lib/pkgconfig/offb_ex.pc
+Symlinking /home/poojith/catkin_ws/devel/share/offb_ex/cmake/offb_exConfig-version.cmake
+Symlinking /home/poojith/catkin_ws/devel/share/offb_ex/cmake/offb_exConfig.cmake
+Symlinking /home/poojith/catkin_ws/devel/share/offb_ex/cmake/offb_ex-msg-paths.cmake
+Symlinking /home/poojith/catkin_ws/devel/share/offb_ex/cmake/offb_ex-msg-extras.cmake
+Symlinking /home/poojith/catkin_ws/devel/share/roseus/ros/offb_ex/manifest.l

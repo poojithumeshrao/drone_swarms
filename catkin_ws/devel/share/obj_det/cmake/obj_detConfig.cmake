@@ -1,0 +1,1 @@
+/home/poojith/catkin_ws/devel/.private/obj_det/share/obj_det/cmake/obj_detConfig.cmake

@@ -1,0 +1,1 @@
+/home/poojith/catkin_ws/devel/.private/offb_ex/share/roseus/ros/offb_ex/manifest.l

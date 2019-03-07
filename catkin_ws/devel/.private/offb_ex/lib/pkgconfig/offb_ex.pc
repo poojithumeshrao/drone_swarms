@@ -1,0 +1,8 @@
+prefix=/home/poojith/catkin_ws/devel/.private/offb_ex
+
+Name: offb_ex
+Description: Description of offb_ex
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/poojith/catkin_ws/devel/.private/offb_ex/lib 
+Requires: mavros rospy message_runtime geometry_msgs std_msgs mavros_msgs

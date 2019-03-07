@@ -1,0 +1,8 @@
+prefix=/home/poojith/catkin_ws/devel/.private/first_example
+
+Name: first_example
+Description: Description of first_example
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/poojith/catkin_ws/devel/.private/first_example/lib 
+Requires: 

@@ -1,0 +1,10 @@
+# CMake generated Testfile for 
+# Source directory: /home/poojith/catkin_ws/src/mavros/mavros
+# Build directory: /home/poojith/catkin_ws/build_isolated/mavros
+# 
+# This file includes the relevant testing commands required for 
+# testing this directory and lists subdirectories to be tested as well.
+add_test(_ctest_mavros_gtest_libmavros-frame-conversions-test "/home/poojith/catkin_ws/build_isolated/mavros/catkin_generated/env_cached.sh" "/usr/bin/python" "/opt/ros/kinetic/share/catkin/cmake/test/run_tests.py" "/home/poojith/catkin_ws/build_isolated/mavros/test_results/mavros/gtest-libmavros-frame-conversions-test.xml" "--return-code" "/home/poojith/catkin_ws/devel_isolated/mavros/lib/mavros/libmavros-frame-conversions-test --gtest_output=xml:/home/poojith/catkin_ws/build_isolated/mavros/test_results/mavros/gtest-libmavros-frame-conversions-test.xml")
+add_test(_ctest_mavros_gtest_libmavros-sensor-orientation-test "/home/poojith/catkin_ws/build_isolated/mavros/catkin_generated/env_cached.sh" "/usr/bin/python" "/opt/ros/kinetic/share/catkin/cmake/test/run_tests.py" "/home/poojith/catkin_ws/build_isolated/mavros/test_results/mavros/gtest-libmavros-sensor-orientation-test.xml" "--return-code" "/home/poojith/catkin_ws/devel_isolated/mavros/lib/mavros/libmavros-sensor-orientation-test --gtest_output=xml:/home/poojith/catkin_ws/build_isolated/mavros/test_results/mavros/gtest-libmavros-sensor-orientation-test.xml")
+add_test(_ctest_mavros_gtest_libmavros-quaternion-utils-test "/home/poojith/catkin_ws/build_isolated/mavros/catkin_generated/env_cached.sh" "/usr/bin/python" "/opt/ros/kinetic/share/catkin/cmake/test/run_tests.py" "/home/poojith/catkin_ws/build_isolated/mavros/test_results/mavros/gtest-libmavros-quaternion-utils-test.xml" "--return-code" "/home/poojith/catkin_ws/devel_isolated/mavros/lib/mavros/libmavros-quaternion-utils-test --gtest_output=xml:/home/poojith/catkin_ws/build_isolated/mavros/test_results/mavros/gtest-libmavros-quaternion-utils-test.xml")
+subdirs(gtest)
