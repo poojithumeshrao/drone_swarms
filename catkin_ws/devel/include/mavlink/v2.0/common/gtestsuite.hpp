@@ -8714,6 +8714,9 @@ TEST(common, DISTANCE_SENSOR)
     packet_in.id = 230;
     packet_in.orientation = 41;
     packet_in.covariance = 108;
+    packet_in.horizontal_fov = 115.0;
+    packet_in.vertical_fov = 143.0;
+    packet_in.quaternion = {{ 171.0, 172.0, 173.0, 174.0 }};
 
     mavlink::common::msg::DISTANCE_SENSOR packet1{};
     mavlink::common::msg::DISTANCE_SENSOR packet2{};
@@ -8736,6 +8739,9 @@ TEST(common, DISTANCE_SENSOR)
     EXPECT_EQ(packet1.id, packet2.id);
     EXPECT_EQ(packet1.orientation, packet2.orientation);
     EXPECT_EQ(packet1.covariance, packet2.covariance);
+    EXPECT_EQ(packet1.horizontal_fov, packet2.horizontal_fov);
+    EXPECT_EQ(packet1.vertical_fov, packet2.vertical_fov);
+    EXPECT_EQ(packet1.quaternion, packet2.quaternion);
 }
 
 #ifdef TEST_INTEROP
@@ -8747,7 +8753,7 @@ TEST(common_interop, DISTANCE_SENSOR)
     memset(&msg, 0, sizeof(msg));
 
     mavlink_distance_sensor_t packet_c {
-         963497464, 17443, 17547, 17651, 163, 230, 41, 108
+         963497464, 17443, 17547, 17651, 163, 230, 41, 108, 115.0, 143.0, { 171.0, 172.0, 173.0, 174.0 }
     };
 
     mavlink::common::msg::DISTANCE_SENSOR packet_in{};
@@ -8759,6 +8765,9 @@ TEST(common_interop, DISTANCE_SENSOR)
     packet_in.id = 230;
     packet_in.orientation = 41;
     packet_in.covariance = 108;
+    packet_in.horizontal_fov = 115.0;
+    packet_in.vertical_fov = 143.0;
+    packet_in.quaternion = {{ 171.0, 172.0, 173.0, 174.0 }};
 
     mavlink::common::msg::DISTANCE_SENSOR packet2{};
 
@@ -8779,6 +8788,9 @@ TEST(common_interop, DISTANCE_SENSOR)
     EXPECT_EQ(packet_in.id, packet2.id);
     EXPECT_EQ(packet_in.orientation, packet2.orientation);
     EXPECT_EQ(packet_in.covariance, packet2.covariance);
+    EXPECT_EQ(packet_in.horizontal_fov, packet2.horizontal_fov);
+    EXPECT_EQ(packet_in.vertical_fov, packet2.vertical_fov);
+    EXPECT_EQ(packet_in.quaternion, packet2.quaternion);
 
 #ifdef PRINT_MSG
     PRINT_MSG(msg);
@@ -12239,6 +12251,8 @@ TEST(common, CAMERA_SETTINGS)
     mavlink::common::msg::CAMERA_SETTINGS packet_in{};
     packet_in.time_boot_ms = 963497464;
     packet_in.mode_id = 17;
+    packet_in.zoomLevel = 52.0;
+    packet_in.focusLevel = 80.0;
 
     mavlink::common::msg::CAMERA_SETTINGS packet1{};
     mavlink::common::msg::CAMERA_SETTINGS packet2{};
@@ -12255,6 +12269,8 @@ TEST(common, CAMERA_SETTINGS)
 
     EXPECT_EQ(packet1.time_boot_ms, packet2.time_boot_ms);
     EXPECT_EQ(packet1.mode_id, packet2.mode_id);
+    EXPECT_EQ(packet1.zoomLevel, packet2.zoomLevel);
+    EXPECT_EQ(packet1.focusLevel, packet2.focusLevel);
 }
 
 #ifdef TEST_INTEROP
@@ -12266,12 +12282,14 @@ TEST(common_interop, CAMERA_SETTINGS)
     memset(&msg, 0, sizeof(msg));
 
     mavlink_camera_settings_t packet_c {
-         963497464, 17
+         963497464, 17, 52.0, 80.0
     };
 
     mavlink::common::msg::CAMERA_SETTINGS packet_in{};
     packet_in.time_boot_ms = 963497464;
     packet_in.mode_id = 17;
+    packet_in.zoomLevel = 52.0;
+    packet_in.focusLevel = 80.0;
 
     mavlink::common::msg::CAMERA_SETTINGS packet2{};
 
@@ -12286,6 +12304,8 @@ TEST(common_interop, CAMERA_SETTINGS)
 
     EXPECT_EQ(packet_in.time_boot_ms, packet2.time_boot_ms);
     EXPECT_EQ(packet_in.mode_id, packet2.mode_id);
+    EXPECT_EQ(packet_in.zoomLevel, packet2.zoomLevel);
+    EXPECT_EQ(packet_in.focusLevel, packet2.focusLevel);
 
 #ifdef PRINT_MSG
     PRINT_MSG(msg);
@@ -12940,14 +12960,18 @@ TEST(common, VIDEO_STREAM_INFORMATION)
     mavlink::MsgMap map2(msg);
 
     mavlink::common::msg::VIDEO_STREAM_INFORMATION packet_in{};
-    packet_in.camera_id = 175;
-    packet_in.status = 242;
+    packet_in.stream_id = 187;
+    packet_in.count = 254;
+    packet_in.type = 65;
+    packet_in.flags = 17651;
     packet_in.framerate = 17.0;
-    packet_in.resolution_h = 17651;
-    packet_in.resolution_v = 17755;
+    packet_in.resolution_h = 17755;
+    packet_in.resolution_v = 17859;
     packet_in.bitrate = 963497672;
-    packet_in.rotation = 17859;
-    packet_in.uri = to_char_array("QRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJK");
+    packet_in.rotation = 17963;
+    packet_in.hfov = 18067;
+    packet_in.name = to_char_array("VWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ");
+    packet_in.uri = to_char_array("BCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCD");
 
     mavlink::common::msg::VIDEO_STREAM_INFORMATION packet1{};
     mavlink::common::msg::VIDEO_STREAM_INFORMATION packet2{};
@@ -12962,13 +12986,17 @@ TEST(common, VIDEO_STREAM_INFORMATION)
 
     packet2.deserialize(map2);
 
-    EXPECT_EQ(packet1.camera_id, packet2.camera_id);
-    EXPECT_EQ(packet1.status, packet2.status);
+    EXPECT_EQ(packet1.stream_id, packet2.stream_id);
+    EXPECT_EQ(packet1.count, packet2.count);
+    EXPECT_EQ(packet1.type, packet2.type);
+    EXPECT_EQ(packet1.flags, packet2.flags);
     EXPECT_EQ(packet1.framerate, packet2.framerate);
     EXPECT_EQ(packet1.resolution_h, packet2.resolution_h);
     EXPECT_EQ(packet1.resolution_v, packet2.resolution_v);
     EXPECT_EQ(packet1.bitrate, packet2.bitrate);
     EXPECT_EQ(packet1.rotation, packet2.rotation);
+    EXPECT_EQ(packet1.hfov, packet2.hfov);
+    EXPECT_EQ(packet1.name, packet2.name);
     EXPECT_EQ(packet1.uri, packet2.uri);
 }
 
@@ -12981,18 +13009,22 @@ TEST(common_interop, VIDEO_STREAM_INFORMATION)
     memset(&msg, 0, sizeof(msg));
 
     mavlink_video_stream_information_t packet_c {
-         17.0, 963497672, 17651, 17755, 17859, 175, 242, "QRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJK"
+         17.0, 963497672, 17651, 17755, 17859, 17963, 18067, 187, 254, 65, "VWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ", "BCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCD"
     };
 
     mavlink::common::msg::VIDEO_STREAM_INFORMATION packet_in{};
-    packet_in.camera_id = 175;
-    packet_in.status = 242;
+    packet_in.stream_id = 187;
+    packet_in.count = 254;
+    packet_in.type = 65;
+    packet_in.flags = 17651;
     packet_in.framerate = 17.0;
-    packet_in.resolution_h = 17651;
-    packet_in.resolution_v = 17755;
+    packet_in.resolution_h = 17755;
+    packet_in.resolution_v = 17859;
     packet_in.bitrate = 963497672;
-    packet_in.rotation = 17859;
-    packet_in.uri = to_char_array("QRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJK");
+    packet_in.rotation = 17963;
+    packet_in.hfov = 18067;
+    packet_in.name = to_char_array("VWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ");
+    packet_in.uri = to_char_array("BCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCD");
 
     mavlink::common::msg::VIDEO_STREAM_INFORMATION packet2{};
 
@@ -13005,13 +13037,17 @@ TEST(common_interop, VIDEO_STREAM_INFORMATION)
         packet2.deserialize(map2);
     } (&msg);
 
-    EXPECT_EQ(packet_in.camera_id, packet2.camera_id);
-    EXPECT_EQ(packet_in.status, packet2.status);
+    EXPECT_EQ(packet_in.stream_id, packet2.stream_id);
+    EXPECT_EQ(packet_in.count, packet2.count);
+    EXPECT_EQ(packet_in.type, packet2.type);
+    EXPECT_EQ(packet_in.flags, packet2.flags);
     EXPECT_EQ(packet_in.framerate, packet2.framerate);
     EXPECT_EQ(packet_in.resolution_h, packet2.resolution_h);
     EXPECT_EQ(packet_in.resolution_v, packet2.resolution_v);
     EXPECT_EQ(packet_in.bitrate, packet2.bitrate);
     EXPECT_EQ(packet_in.rotation, packet2.rotation);
+    EXPECT_EQ(packet_in.hfov, packet2.hfov);
+    EXPECT_EQ(packet_in.name, packet2.name);
     EXPECT_EQ(packet_in.uri, packet2.uri);
 
 #ifdef PRINT_MSG
@@ -13020,25 +13056,24 @@ TEST(common_interop, VIDEO_STREAM_INFORMATION)
 }
 #endif
 
-TEST(common, SET_VIDEO_STREAM_SETTINGS)
+TEST(common, VIDEO_STREAM_STATUS)
 {
     mavlink::mavlink_message_t msg;
     mavlink::MsgMap map1(msg);
     mavlink::MsgMap map2(msg);
 
-    mavlink::common::msg::SET_VIDEO_STREAM_SETTINGS packet_in{};
-    packet_in.target_system = 175;
-    packet_in.target_component = 242;
-    packet_in.camera_id = 53;
+    mavlink::common::msg::VIDEO_STREAM_STATUS packet_in{};
+    packet_in.stream_id = 187;
+    packet_in.flags = 17651;
     packet_in.framerate = 17.0;
-    packet_in.resolution_h = 17651;
-    packet_in.resolution_v = 17755;
+    packet_in.resolution_h = 17755;
+    packet_in.resolution_v = 17859;
     packet_in.bitrate = 963497672;
-    packet_in.rotation = 17859;
-    packet_in.uri = to_char_array("RSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKL");
+    packet_in.rotation = 17963;
+    packet_in.hfov = 18067;
 
-    mavlink::common::msg::SET_VIDEO_STREAM_SETTINGS packet1{};
-    mavlink::common::msg::SET_VIDEO_STREAM_SETTINGS packet2{};
+    mavlink::common::msg::VIDEO_STREAM_STATUS packet1{};
+    mavlink::common::msg::VIDEO_STREAM_STATUS packet2{};
 
     packet1 = packet_in;
 
@@ -13050,43 +13085,41 @@ TEST(common, SET_VIDEO_STREAM_SETTINGS)
 
     packet2.deserialize(map2);
 
-    EXPECT_EQ(packet1.target_system, packet2.target_system);
-    EXPECT_EQ(packet1.target_component, packet2.target_component);
-    EXPECT_EQ(packet1.camera_id, packet2.camera_id);
+    EXPECT_EQ(packet1.stream_id, packet2.stream_id);
+    EXPECT_EQ(packet1.flags, packet2.flags);
     EXPECT_EQ(packet1.framerate, packet2.framerate);
     EXPECT_EQ(packet1.resolution_h, packet2.resolution_h);
     EXPECT_EQ(packet1.resolution_v, packet2.resolution_v);
     EXPECT_EQ(packet1.bitrate, packet2.bitrate);
     EXPECT_EQ(packet1.rotation, packet2.rotation);
-    EXPECT_EQ(packet1.uri, packet2.uri);
+    EXPECT_EQ(packet1.hfov, packet2.hfov);
 }
 
 #ifdef TEST_INTEROP
-TEST(common_interop, SET_VIDEO_STREAM_SETTINGS)
+TEST(common_interop, VIDEO_STREAM_STATUS)
 {
     mavlink_message_t msg;
 
     // to get nice print
     memset(&msg, 0, sizeof(msg));
 
-    mavlink_set_video_stream_settings_t packet_c {
-         17.0, 963497672, 17651, 17755, 17859, 175, 242, 53, "RSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKL"
+    mavlink_video_stream_status_t packet_c {
+         17.0, 963497672, 17651, 17755, 17859, 17963, 18067, 187
     };
 
-    mavlink::common::msg::SET_VIDEO_STREAM_SETTINGS packet_in{};
-    packet_in.target_system = 175;
-    packet_in.target_component = 242;
-    packet_in.camera_id = 53;
+    mavlink::common::msg::VIDEO_STREAM_STATUS packet_in{};
+    packet_in.stream_id = 187;
+    packet_in.flags = 17651;
     packet_in.framerate = 17.0;
-    packet_in.resolution_h = 17651;
-    packet_in.resolution_v = 17755;
+    packet_in.resolution_h = 17755;
+    packet_in.resolution_v = 17859;
     packet_in.bitrate = 963497672;
-    packet_in.rotation = 17859;
-    packet_in.uri = to_char_array("RSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKL");
+    packet_in.rotation = 17963;
+    packet_in.hfov = 18067;
 
-    mavlink::common::msg::SET_VIDEO_STREAM_SETTINGS packet2{};
+    mavlink::common::msg::VIDEO_STREAM_STATUS packet2{};
 
-    mavlink_msg_set_video_stream_settings_encode(1, 1, &msg, &packet_c);
+    mavlink_msg_video_stream_status_encode(1, 1, &msg, &packet_c);
 
     // simulate message-handling callback
     [&packet2](const mavlink_message_t *cmsg) {
@@ -13095,15 +13128,14 @@ TEST(common_interop, SET_VIDEO_STREAM_SETTINGS)
         packet2.deserialize(map2);
     } (&msg);
 
-    EXPECT_EQ(packet_in.target_system, packet2.target_system);
-    EXPECT_EQ(packet_in.target_component, packet2.target_component);
-    EXPECT_EQ(packet_in.camera_id, packet2.camera_id);
+    EXPECT_EQ(packet_in.stream_id, packet2.stream_id);
+    EXPECT_EQ(packet_in.flags, packet2.flags);
     EXPECT_EQ(packet_in.framerate, packet2.framerate);
     EXPECT_EQ(packet_in.resolution_h, packet2.resolution_h);
     EXPECT_EQ(packet_in.resolution_v, packet2.resolution_v);
     EXPECT_EQ(packet_in.bitrate, packet2.bitrate);
     EXPECT_EQ(packet_in.rotation, packet2.rotation);
-    EXPECT_EQ(packet_in.uri, packet2.uri);
+    EXPECT_EQ(packet_in.hfov, packet2.hfov);
 
 #ifdef PRINT_MSG
     PRINT_MSG(msg);
@@ -14151,6 +14183,496 @@ TEST(common_interop, TRAJECTORY_REPRESENTATION_BEZIER)
     EXPECT_EQ(packet_in.pos_z, packet2.pos_z);
     EXPECT_EQ(packet_in.delta, packet2.delta);
     EXPECT_EQ(packet_in.pos_yaw, packet2.pos_yaw);
+
+#ifdef PRINT_MSG
+    PRINT_MSG(msg);
+#endif
+}
+#endif
+
+TEST(common, CELLULAR_STATUS)
+{
+    mavlink::mavlink_message_t msg;
+    mavlink::MsgMap map1(msg);
+    mavlink::MsgMap map2(msg);
+
+    mavlink::common::msg::CELLULAR_STATUS packet_in{};
+    packet_in.status = 17443;
+    packet_in.type = 41;
+    packet_in.quality = 108;
+    packet_in.mcc = 17547;
+    packet_in.mnc = 17651;
+    packet_in.lac = 17755;
+    packet_in.cid = 963497464;
+
+    mavlink::common::msg::CELLULAR_STATUS packet1{};
+    mavlink::common::msg::CELLULAR_STATUS packet2{};
+
+    packet1 = packet_in;
+
+    //std::cout << packet1.to_yaml() << std::endl;
+
+    packet1.serialize(map1);
+
+    mavlink::mavlink_finalize_message(&msg, 1, 1, packet1.MIN_LENGTH, packet1.LENGTH, packet1.CRC_EXTRA);
+
+    packet2.deserialize(map2);
+
+    EXPECT_EQ(packet1.status, packet2.status);
+    EXPECT_EQ(packet1.type, packet2.type);
+    EXPECT_EQ(packet1.quality, packet2.quality);
+    EXPECT_EQ(packet1.mcc, packet2.mcc);
+    EXPECT_EQ(packet1.mnc, packet2.mnc);
+    EXPECT_EQ(packet1.lac, packet2.lac);
+    EXPECT_EQ(packet1.cid, packet2.cid);
+}
+
+#ifdef TEST_INTEROP
+TEST(common_interop, CELLULAR_STATUS)
+{
+    mavlink_message_t msg;
+
+    // to get nice print
+    memset(&msg, 0, sizeof(msg));
+
+    mavlink_cellular_status_t packet_c {
+         963497464, 17443, 17547, 17651, 17755, 41, 108
+    };
+
+    mavlink::common::msg::CELLULAR_STATUS packet_in{};
+    packet_in.status = 17443;
+    packet_in.type = 41;
+    packet_in.quality = 108;
+    packet_in.mcc = 17547;
+    packet_in.mnc = 17651;
+    packet_in.lac = 17755;
+    packet_in.cid = 963497464;
+
+    mavlink::common::msg::CELLULAR_STATUS packet2{};
+
+    mavlink_msg_cellular_status_encode(1, 1, &msg, &packet_c);
+
+    // simulate message-handling callback
+    [&packet2](const mavlink_message_t *cmsg) {
+        MsgMap map2(cmsg);
+
+        packet2.deserialize(map2);
+    } (&msg);
+
+    EXPECT_EQ(packet_in.status, packet2.status);
+    EXPECT_EQ(packet_in.type, packet2.type);
+    EXPECT_EQ(packet_in.quality, packet2.quality);
+    EXPECT_EQ(packet_in.mcc, packet2.mcc);
+    EXPECT_EQ(packet_in.mnc, packet2.mnc);
+    EXPECT_EQ(packet_in.lac, packet2.lac);
+    EXPECT_EQ(packet_in.cid, packet2.cid);
+
+#ifdef PRINT_MSG
+    PRINT_MSG(msg);
+#endif
+}
+#endif
+
+TEST(common, UTM_GLOBAL_POSITION)
+{
+    mavlink::mavlink_message_t msg;
+    mavlink::MsgMap map1(msg);
+    mavlink::MsgMap map2(msg);
+
+    mavlink::common::msg::UTM_GLOBAL_POSITION packet_in{};
+    packet_in.time = 93372036854775807ULL;
+    packet_in.uas_id = {{ 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44 }};
+    packet_in.lat = 963497880;
+    packet_in.lon = 963498088;
+    packet_in.alt = 963498296;
+    packet_in.relative_alt = 963498504;
+    packet_in.vx = 19107;
+    packet_in.vy = 19211;
+    packet_in.vz = 19315;
+    packet_in.h_acc = 19419;
+    packet_in.v_acc = 19523;
+    packet_in.vel_acc = 19627;
+    packet_in.next_lat = 963498712;
+    packet_in.next_lon = 963498920;
+    packet_in.next_alt = 963499128;
+    packet_in.update_rate = 19731;
+    packet_in.flight_state = 209;
+    packet_in.flags = 20;
+
+    mavlink::common::msg::UTM_GLOBAL_POSITION packet1{};
+    mavlink::common::msg::UTM_GLOBAL_POSITION packet2{};
+
+    packet1 = packet_in;
+
+    //std::cout << packet1.to_yaml() << std::endl;
+
+    packet1.serialize(map1);
+
+    mavlink::mavlink_finalize_message(&msg, 1, 1, packet1.MIN_LENGTH, packet1.LENGTH, packet1.CRC_EXTRA);
+
+    packet2.deserialize(map2);
+
+    EXPECT_EQ(packet1.time, packet2.time);
+    EXPECT_EQ(packet1.uas_id, packet2.uas_id);
+    EXPECT_EQ(packet1.lat, packet2.lat);
+    EXPECT_EQ(packet1.lon, packet2.lon);
+    EXPECT_EQ(packet1.alt, packet2.alt);
+    EXPECT_EQ(packet1.relative_alt, packet2.relative_alt);
+    EXPECT_EQ(packet1.vx, packet2.vx);
+    EXPECT_EQ(packet1.vy, packet2.vy);
+    EXPECT_EQ(packet1.vz, packet2.vz);
+    EXPECT_EQ(packet1.h_acc, packet2.h_acc);
+    EXPECT_EQ(packet1.v_acc, packet2.v_acc);
+    EXPECT_EQ(packet1.vel_acc, packet2.vel_acc);
+    EXPECT_EQ(packet1.next_lat, packet2.next_lat);
+    EXPECT_EQ(packet1.next_lon, packet2.next_lon);
+    EXPECT_EQ(packet1.next_alt, packet2.next_alt);
+    EXPECT_EQ(packet1.update_rate, packet2.update_rate);
+    EXPECT_EQ(packet1.flight_state, packet2.flight_state);
+    EXPECT_EQ(packet1.flags, packet2.flags);
+}
+
+#ifdef TEST_INTEROP
+TEST(common_interop, UTM_GLOBAL_POSITION)
+{
+    mavlink_message_t msg;
+
+    // to get nice print
+    memset(&msg, 0, sizeof(msg));
+
+    mavlink_utm_global_position_t packet_c {
+         93372036854775807ULL, 963497880, 963498088, 963498296, 963498504, 963498712, 963498920, 963499128, 19107, 19211, 19315, 19419, 19523, 19627, 19731, { 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44 }, 209, 20
+    };
+
+    mavlink::common::msg::UTM_GLOBAL_POSITION packet_in{};
+    packet_in.time = 93372036854775807ULL;
+    packet_in.uas_id = {{ 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44 }};
+    packet_in.lat = 963497880;
+    packet_in.lon = 963498088;
+    packet_in.alt = 963498296;
+    packet_in.relative_alt = 963498504;
+    packet_in.vx = 19107;
+    packet_in.vy = 19211;
+    packet_in.vz = 19315;
+    packet_in.h_acc = 19419;
+    packet_in.v_acc = 19523;
+    packet_in.vel_acc = 19627;
+    packet_in.next_lat = 963498712;
+    packet_in.next_lon = 963498920;
+    packet_in.next_alt = 963499128;
+    packet_in.update_rate = 19731;
+    packet_in.flight_state = 209;
+    packet_in.flags = 20;
+
+    mavlink::common::msg::UTM_GLOBAL_POSITION packet2{};
+
+    mavlink_msg_utm_global_position_encode(1, 1, &msg, &packet_c);
+
+    // simulate message-handling callback
+    [&packet2](const mavlink_message_t *cmsg) {
+        MsgMap map2(cmsg);
+
+        packet2.deserialize(map2);
+    } (&msg);
+
+    EXPECT_EQ(packet_in.time, packet2.time);
+    EXPECT_EQ(packet_in.uas_id, packet2.uas_id);
+    EXPECT_EQ(packet_in.lat, packet2.lat);
+    EXPECT_EQ(packet_in.lon, packet2.lon);
+    EXPECT_EQ(packet_in.alt, packet2.alt);
+    EXPECT_EQ(packet_in.relative_alt, packet2.relative_alt);
+    EXPECT_EQ(packet_in.vx, packet2.vx);
+    EXPECT_EQ(packet_in.vy, packet2.vy);
+    EXPECT_EQ(packet_in.vz, packet2.vz);
+    EXPECT_EQ(packet_in.h_acc, packet2.h_acc);
+    EXPECT_EQ(packet_in.v_acc, packet2.v_acc);
+    EXPECT_EQ(packet_in.vel_acc, packet2.vel_acc);
+    EXPECT_EQ(packet_in.next_lat, packet2.next_lat);
+    EXPECT_EQ(packet_in.next_lon, packet2.next_lon);
+    EXPECT_EQ(packet_in.next_alt, packet2.next_alt);
+    EXPECT_EQ(packet_in.update_rate, packet2.update_rate);
+    EXPECT_EQ(packet_in.flight_state, packet2.flight_state);
+    EXPECT_EQ(packet_in.flags, packet2.flags);
+
+#ifdef PRINT_MSG
+    PRINT_MSG(msg);
+#endif
+}
+#endif
+
+TEST(common, DEBUG_FLOAT_ARRAY)
+{
+    mavlink::mavlink_message_t msg;
+    mavlink::MsgMap map1(msg);
+    mavlink::MsgMap map2(msg);
+
+    mavlink::common::msg::DEBUG_FLOAT_ARRAY packet_in{};
+    packet_in.time_usec = 93372036854775807ULL;
+    packet_in.name = to_char_array("KLMNOPQRS");
+    packet_in.array_id = 17651;
+    packet_in.data = {{ 157.0, 158.0, 159.0, 160.0, 161.0, 162.0, 163.0, 164.0, 165.0, 166.0, 167.0, 168.0, 169.0, 170.0, 171.0, 172.0, 173.0, 174.0, 175.0, 176.0, 177.0, 178.0, 179.0, 180.0, 181.0, 182.0, 183.0, 184.0, 185.0, 186.0, 187.0, 188.0, 189.0, 190.0, 191.0, 192.0, 193.0, 194.0, 195.0, 196.0, 197.0, 198.0, 199.0, 200.0, 201.0, 202.0, 203.0, 204.0, 205.0, 206.0, 207.0, 208.0, 209.0, 210.0, 211.0, 212.0, 213.0, 214.0 }};
+
+    mavlink::common::msg::DEBUG_FLOAT_ARRAY packet1{};
+    mavlink::common::msg::DEBUG_FLOAT_ARRAY packet2{};
+
+    packet1 = packet_in;
+
+    //std::cout << packet1.to_yaml() << std::endl;
+
+    packet1.serialize(map1);
+
+    mavlink::mavlink_finalize_message(&msg, 1, 1, packet1.MIN_LENGTH, packet1.LENGTH, packet1.CRC_EXTRA);
+
+    packet2.deserialize(map2);
+
+    EXPECT_EQ(packet1.time_usec, packet2.time_usec);
+    EXPECT_EQ(packet1.name, packet2.name);
+    EXPECT_EQ(packet1.array_id, packet2.array_id);
+    EXPECT_EQ(packet1.data, packet2.data);
+}
+
+#ifdef TEST_INTEROP
+TEST(common_interop, DEBUG_FLOAT_ARRAY)
+{
+    mavlink_message_t msg;
+
+    // to get nice print
+    memset(&msg, 0, sizeof(msg));
+
+    mavlink_debug_float_array_t packet_c {
+         93372036854775807ULL, 17651, "KLMNOPQRS", { 157.0, 158.0, 159.0, 160.0, 161.0, 162.0, 163.0, 164.0, 165.0, 166.0, 167.0, 168.0, 169.0, 170.0, 171.0, 172.0, 173.0, 174.0, 175.0, 176.0, 177.0, 178.0, 179.0, 180.0, 181.0, 182.0, 183.0, 184.0, 185.0, 186.0, 187.0, 188.0, 189.0, 190.0, 191.0, 192.0, 193.0, 194.0, 195.0, 196.0, 197.0, 198.0, 199.0, 200.0, 201.0, 202.0, 203.0, 204.0, 205.0, 206.0, 207.0, 208.0, 209.0, 210.0, 211.0, 212.0, 213.0, 214.0 }
+    };
+
+    mavlink::common::msg::DEBUG_FLOAT_ARRAY packet_in{};
+    packet_in.time_usec = 93372036854775807ULL;
+    packet_in.name = to_char_array("KLMNOPQRS");
+    packet_in.array_id = 17651;
+    packet_in.data = {{ 157.0, 158.0, 159.0, 160.0, 161.0, 162.0, 163.0, 164.0, 165.0, 166.0, 167.0, 168.0, 169.0, 170.0, 171.0, 172.0, 173.0, 174.0, 175.0, 176.0, 177.0, 178.0, 179.0, 180.0, 181.0, 182.0, 183.0, 184.0, 185.0, 186.0, 187.0, 188.0, 189.0, 190.0, 191.0, 192.0, 193.0, 194.0, 195.0, 196.0, 197.0, 198.0, 199.0, 200.0, 201.0, 202.0, 203.0, 204.0, 205.0, 206.0, 207.0, 208.0, 209.0, 210.0, 211.0, 212.0, 213.0, 214.0 }};
+
+    mavlink::common::msg::DEBUG_FLOAT_ARRAY packet2{};
+
+    mavlink_msg_debug_float_array_encode(1, 1, &msg, &packet_c);
+
+    // simulate message-handling callback
+    [&packet2](const mavlink_message_t *cmsg) {
+        MsgMap map2(cmsg);
+
+        packet2.deserialize(map2);
+    } (&msg);
+
+    EXPECT_EQ(packet_in.time_usec, packet2.time_usec);
+    EXPECT_EQ(packet_in.name, packet2.name);
+    EXPECT_EQ(packet_in.array_id, packet2.array_id);
+    EXPECT_EQ(packet_in.data, packet2.data);
+
+#ifdef PRINT_MSG
+    PRINT_MSG(msg);
+#endif
+}
+#endif
+
+TEST(common, ORBIT_EXECUTION_STATUS)
+{
+    mavlink::mavlink_message_t msg;
+    mavlink::MsgMap map1(msg);
+    mavlink::MsgMap map2(msg);
+
+    mavlink::common::msg::ORBIT_EXECUTION_STATUS packet_in{};
+    packet_in.time_usec = 93372036854775807ULL;
+    packet_in.radius = 73.0;
+    packet_in.frame = 77;
+    packet_in.x = 963498088;
+    packet_in.y = 963498296;
+    packet_in.z = 157.0;
+
+    mavlink::common::msg::ORBIT_EXECUTION_STATUS packet1{};
+    mavlink::common::msg::ORBIT_EXECUTION_STATUS packet2{};
+
+    packet1 = packet_in;
+
+    //std::cout << packet1.to_yaml() << std::endl;
+
+    packet1.serialize(map1);
+
+    mavlink::mavlink_finalize_message(&msg, 1, 1, packet1.MIN_LENGTH, packet1.LENGTH, packet1.CRC_EXTRA);
+
+    packet2.deserialize(map2);
+
+    EXPECT_EQ(packet1.time_usec, packet2.time_usec);
+    EXPECT_EQ(packet1.radius, packet2.radius);
+    EXPECT_EQ(packet1.frame, packet2.frame);
+    EXPECT_EQ(packet1.x, packet2.x);
+    EXPECT_EQ(packet1.y, packet2.y);
+    EXPECT_EQ(packet1.z, packet2.z);
+}
+
+#ifdef TEST_INTEROP
+TEST(common_interop, ORBIT_EXECUTION_STATUS)
+{
+    mavlink_message_t msg;
+
+    // to get nice print
+    memset(&msg, 0, sizeof(msg));
+
+    mavlink_orbit_execution_status_t packet_c {
+         93372036854775807ULL, 73.0, 963498088, 963498296, 157.0, 77
+    };
+
+    mavlink::common::msg::ORBIT_EXECUTION_STATUS packet_in{};
+    packet_in.time_usec = 93372036854775807ULL;
+    packet_in.radius = 73.0;
+    packet_in.frame = 77;
+    packet_in.x = 963498088;
+    packet_in.y = 963498296;
+    packet_in.z = 157.0;
+
+    mavlink::common::msg::ORBIT_EXECUTION_STATUS packet2{};
+
+    mavlink_msg_orbit_execution_status_encode(1, 1, &msg, &packet_c);
+
+    // simulate message-handling callback
+    [&packet2](const mavlink_message_t *cmsg) {
+        MsgMap map2(cmsg);
+
+        packet2.deserialize(map2);
+    } (&msg);
+
+    EXPECT_EQ(packet_in.time_usec, packet2.time_usec);
+    EXPECT_EQ(packet_in.radius, packet2.radius);
+    EXPECT_EQ(packet_in.frame, packet2.frame);
+    EXPECT_EQ(packet_in.x, packet2.x);
+    EXPECT_EQ(packet_in.y, packet2.y);
+    EXPECT_EQ(packet_in.z, packet2.z);
+
+#ifdef PRINT_MSG
+    PRINT_MSG(msg);
+#endif
+}
+#endif
+
+TEST(common, STATUSTEXT_LONG)
+{
+    mavlink::mavlink_message_t msg;
+    mavlink::MsgMap map1(msg);
+    mavlink::MsgMap map2(msg);
+
+    mavlink::common::msg::STATUSTEXT_LONG packet_in{};
+    packet_in.severity = 5;
+    packet_in.text = to_char_array("BCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRST");
+
+    mavlink::common::msg::STATUSTEXT_LONG packet1{};
+    mavlink::common::msg::STATUSTEXT_LONG packet2{};
+
+    packet1 = packet_in;
+
+    //std::cout << packet1.to_yaml() << std::endl;
+
+    packet1.serialize(map1);
+
+    mavlink::mavlink_finalize_message(&msg, 1, 1, packet1.MIN_LENGTH, packet1.LENGTH, packet1.CRC_EXTRA);
+
+    packet2.deserialize(map2);
+
+    EXPECT_EQ(packet1.severity, packet2.severity);
+    EXPECT_EQ(packet1.text, packet2.text);
+}
+
+#ifdef TEST_INTEROP
+TEST(common_interop, STATUSTEXT_LONG)
+{
+    mavlink_message_t msg;
+
+    // to get nice print
+    memset(&msg, 0, sizeof(msg));
+
+    mavlink_statustext_long_t packet_c {
+         5, "BCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRST"
+    };
+
+    mavlink::common::msg::STATUSTEXT_LONG packet_in{};
+    packet_in.severity = 5;
+    packet_in.text = to_char_array("BCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRST");
+
+    mavlink::common::msg::STATUSTEXT_LONG packet2{};
+
+    mavlink_msg_statustext_long_encode(1, 1, &msg, &packet_c);
+
+    // simulate message-handling callback
+    [&packet2](const mavlink_message_t *cmsg) {
+        MsgMap map2(cmsg);
+
+        packet2.deserialize(map2);
+    } (&msg);
+
+    EXPECT_EQ(packet_in.severity, packet2.severity);
+    EXPECT_EQ(packet_in.text, packet2.text);
+
+#ifdef PRINT_MSG
+    PRINT_MSG(msg);
+#endif
+}
+#endif
+
+TEST(common, WHEEL_DISTANCE)
+{
+    mavlink::mavlink_message_t msg;
+    mavlink::MsgMap map1(msg);
+    mavlink::MsgMap map2(msg);
+
+    mavlink::common::msg::WHEEL_DISTANCE packet_in{};
+    packet_in.time_usec = 93372036854775807ULL;
+    packet_in.count = 157;
+    packet_in.distance = {{ 179.0, 180.0, 181.0, 182.0, 183.0, 184.0, 185.0, 186.0, 187.0, 188.0, 189.0, 190.0, 191.0, 192.0, 193.0, 194.0 }};
+
+    mavlink::common::msg::WHEEL_DISTANCE packet1{};
+    mavlink::common::msg::WHEEL_DISTANCE packet2{};
+
+    packet1 = packet_in;
+
+    //std::cout << packet1.to_yaml() << std::endl;
+
+    packet1.serialize(map1);
+
+    mavlink::mavlink_finalize_message(&msg, 1, 1, packet1.MIN_LENGTH, packet1.LENGTH, packet1.CRC_EXTRA);
+
+    packet2.deserialize(map2);
+
+    EXPECT_EQ(packet1.time_usec, packet2.time_usec);
+    EXPECT_EQ(packet1.count, packet2.count);
+    EXPECT_EQ(packet1.distance, packet2.distance);
+}
+
+#ifdef TEST_INTEROP
+TEST(common_interop, WHEEL_DISTANCE)
+{
+    mavlink_message_t msg;
+
+    // to get nice print
+    memset(&msg, 0, sizeof(msg));
+
+    mavlink_wheel_distance_t packet_c {
+         93372036854775807ULL, { 179.0, 180.0, 181.0, 182.0, 183.0, 184.0, 185.0, 186.0, 187.0, 188.0, 189.0, 190.0, 191.0, 192.0, 193.0, 194.0 }, 157
+    };
+
+    mavlink::common::msg::WHEEL_DISTANCE packet_in{};
+    packet_in.time_usec = 93372036854775807ULL;
+    packet_in.count = 157;
+    packet_in.distance = {{ 179.0, 180.0, 181.0, 182.0, 183.0, 184.0, 185.0, 186.0, 187.0, 188.0, 189.0, 190.0, 191.0, 192.0, 193.0, 194.0 }};
+
+    mavlink::common::msg::WHEEL_DISTANCE packet2{};
+
+    mavlink_msg_wheel_distance_encode(1, 1, &msg, &packet_c);
+
+    // simulate message-handling callback
+    [&packet2](const mavlink_message_t *cmsg) {
+        MsgMap map2(cmsg);
+
+        packet2.deserialize(map2);
+    } (&msg);
+
+    EXPECT_EQ(packet_in.time_usec, packet2.time_usec);
+    EXPECT_EQ(packet_in.count, packet2.count);
+    EXPECT_EQ(packet_in.distance, packet2.distance);
 
 #ifdef PRINT_MSG
     PRINT_MSG(msg);

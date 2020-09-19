@@ -148,7 +148,7 @@ struct Definition< ::mavros_msgs::RTCM_<ContainerAllocator> >
 # The gps_rtk plugin will fragment the data if necessary and \n\
 # forward it to the FCU via Mavlink through the available link.\n\
 # data should be <= 4*180, higher will be discarded.\n\
-Header header\n\
+std_msgs/Header header\n\
 uint8[] data\n\
 \n\
 ================================================================================\n\

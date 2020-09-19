@@ -41,6 +41,7 @@ Not searching for unused variables given on the command line.
 [36m--[0m   system
 [36m--[0m Performing Test COMPILER_SUPPORTS_STD_CXX14
 [36m--[0m Performing Test COMPILER_SUPPORTS_STD_CXX14 - Success
+[36m--[0m Copy mavlink_dialect.h to source tree
 [36m--[0m Configuring done
 [36m--[0m Generating done
 [36m--[0m Build files have been written to: /home/poojith/catkin_ws/build/libmavconn

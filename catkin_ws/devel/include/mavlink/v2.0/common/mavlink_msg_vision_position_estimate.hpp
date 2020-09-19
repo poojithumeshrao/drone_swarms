@@ -9,7 +9,7 @@ namespace msg {
 /**
  * @brief VISION_POSITION_ESTIMATE message
  *
- * 
+ * Global position/attitude estimate from a vision source.
  */
 struct VISION_POSITION_ESTIMATE : mavlink::Message {
     static constexpr msgid_t MSG_ID = 102;

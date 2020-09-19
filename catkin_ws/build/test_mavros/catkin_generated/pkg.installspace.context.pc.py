@@ -5,4 +5,4 @@ PROJECT_CATKIN_DEPENDS = "mavros;mavros_extras;roscpp;std_msgs;geometry_msgs;tf2
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "/usr/lib/x86_64-linux-gnu/libboost_system.so".split(';') if "/usr/lib/x86_64-linux-gnu/libboost_system.so" != "" else []
 PROJECT_NAME = "test_mavros"
 PROJECT_SPACE_DIR = "/home/poojith/catkin_ws/install"
-PROJECT_VERSION = "0.26.3"
+PROJECT_VERSION = "0.29.0"

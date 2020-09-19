@@ -24,7 +24,7 @@ struct GPS_RAW_INT : mavlink::Message {
     uint8_t fix_type; /*<  GPS fix type. */
     int32_t lat; /*< [degE7] Latitude (WGS84, EGM96 ellipsoid) */
     int32_t lon; /*< [degE7] Longitude (WGS84, EGM96 ellipsoid) */
-    int32_t alt; /*< [mm] Altitude (AMSL). Positive for up. Note that virtually all GPS modules provide the AMSL altitude in addition to the WGS84 altitude. */
+    int32_t alt; /*< [mm] Altitude (MSL). Positive for up. Note that virtually all GPS modules provide the MSL altitude in addition to the WGS84 altitude. */
     uint16_t eph; /*<  GPS HDOP horizontal dilution of position (unitless). If unknown, set to: UINT16_MAX */
     uint16_t epv; /*<  GPS VDOP vertical dilution of position (unitless). If unknown, set to: UINT16_MAX */
     uint16_t vel; /*< [cm/s] GPS ground speed. If unknown, set to: UINT16_MAX */

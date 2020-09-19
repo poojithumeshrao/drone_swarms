@@ -14,7 +14,7 @@ class Trajectory(genpy.Message):
   _type = "mavros_msgs/Trajectory"
   _has_header = True #flag to mark the presence of a Header object
   _full_text = """# MAVLink message: TRAJECTORY
-# http://mavlink.org/messages/common#TRAJECTORY
+# https://mavlink.io/en/messages/common.html#TRAJECTORY
 
 std_msgs/Header header
 

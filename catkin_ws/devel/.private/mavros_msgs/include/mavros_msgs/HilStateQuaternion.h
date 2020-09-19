@@ -183,7 +183,7 @@ struct Definition< ::mavros_msgs::HilStateQuaternion_<ContainerAllocator> >
 #\n\
 # ROS representation of MAVLink HIL_STATE_QUATERNION\n\
 # See mavlink message documentation here:\n\
-# https://pixhawk.ethz.ch/mavlink/#HIL_STATE_QUATERNION\n\
+# https://mavlink.io/en/messages/common.html#HIL_STATE_QUATERNION\n\
 \n\
 std_msgs/Header header\n\
 \n\

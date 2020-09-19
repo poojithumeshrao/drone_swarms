@@ -23,7 +23,7 @@ struct SET_POSITION_TARGET_LOCAL_NED : mavlink::Message {
     uint8_t target_system; /*<  System ID */
     uint8_t target_component; /*<  Component ID */
     uint8_t coordinate_frame; /*<  Valid options are: MAV_FRAME_LOCAL_NED = 1, MAV_FRAME_LOCAL_OFFSET_NED = 7, MAV_FRAME_BODY_NED = 8, MAV_FRAME_BODY_OFFSET_NED = 9 */
-    uint16_t type_mask; /*<  Bitmap to indicate which dimensions should be ignored by the vehicle: a value of 0b0000000000000000 or 0b0000001000000000 indicates that none of the setpoint dimensions should be ignored. If bit 10 is set the floats afx afy afz should be interpreted as force instead of acceleration. Mapping: bit 1: x, bit 2: y, bit 3: z, bit 4: vx, bit 5: vy, bit 6: vz, bit 7: ax, bit 8: ay, bit 9: az, bit 10: is force setpoint, bit 11: yaw, bit 12: yaw rate */
+    uint16_t type_mask; /*<  Bitmap to indicate which dimensions should be ignored by the vehicle. */
     float x; /*< [m] X Position in NED frame */
     float y; /*< [m] Y Position in NED frame */
     float z; /*< [m] Z Position in NED frame (note, altitude is negative in NED) */

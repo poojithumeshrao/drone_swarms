@@ -13,12 +13,13 @@ namespace msg {
  */
 struct SENS_ATMOS : mavlink::Message {
     static constexpr msgid_t MSG_ID = 208;
-    static constexpr size_t LENGTH = 8;
-    static constexpr size_t MIN_LENGTH = 8;
-    static constexpr uint8_t CRC_EXTRA = 175;
+    static constexpr size_t LENGTH = 16;
+    static constexpr size_t MIN_LENGTH = 16;
+    static constexpr uint8_t CRC_EXTRA = 144;
     static constexpr auto NAME = "SENS_ATMOS";
 
 
+    uint64_t timestamp; /*< [us] Time since system boot */
     float TempAmbient; /*< [degC]  Ambient temperature */
     float Humidity; /*< [%]  Relative humidity */
 
@@ -38,6 +39,7 @@ struct SENS_ATMOS : mavlink::Message {
         std::stringstream ss;
 
         ss << NAME << ":" << std::endl;
+        ss << "  timestamp: " << timestamp << std::endl;
         ss << "  TempAmbient: " << TempAmbient << std::endl;
         ss << "  Humidity: " << Humidity << std::endl;
 
@@ -48,14 +50,16 @@ struct SENS_ATMOS : mavlink::Message {
     {
         map.reset(MSG_ID, LENGTH);
 
-        map << TempAmbient;                   // offset: 0
-        map << Humidity;                      // offset: 4
+        map << timestamp;                     // offset: 0
+        map << TempAmbient;                   // offset: 8
+        map << Humidity;                      // offset: 12
     }
 
     inline void deserialize(mavlink::MsgMap &map) override
     {
-        map >> TempAmbient;                   // offset: 0
-        map >> Humidity;                      // offset: 4
+        map >> timestamp;                     // offset: 0
+        map >> TempAmbient;                   // offset: 8
+        map >> Humidity;                      // offset: 12
     }
 };
 

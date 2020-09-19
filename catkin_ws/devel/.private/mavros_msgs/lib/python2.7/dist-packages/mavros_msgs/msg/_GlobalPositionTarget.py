@@ -14,6 +14,7 @@ class GlobalPositionTarget(genpy.Message):
   _has_header = True #flag to mark the presence of a Header object
   _full_text = """# Message for SET_POSITION_TARGET_GLOBAL_INT
 #
+# https://mavlink.io/en/messages/common.html#SET_POSITION_TARGET_GLOBAL_INT
 # Some complex system requires all feautures that mavlink
 # message provide. See issue #402, #415.
 

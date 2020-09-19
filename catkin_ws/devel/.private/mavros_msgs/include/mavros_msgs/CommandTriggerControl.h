@@ -40,7 +40,7 @@ template<>
 struct MD5Sum< ::mavros_msgs::CommandTriggerControl > {
   static const char* value()
   {
-    return "7036c5f362c09a051915015871ce633d";
+    return "65be46a6918cb61b7dceb7c9ba9b1c97";
   }
 
   static const char* value(const ::mavros_msgs::CommandTriggerControl&) { return value(); }

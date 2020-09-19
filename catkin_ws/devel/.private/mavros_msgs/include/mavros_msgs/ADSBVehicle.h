@@ -295,7 +295,7 @@ struct Definition< ::mavros_msgs::ADSBVehicle_<ContainerAllocator> >
   {
     return "# The location and information of an ADSB vehicle\n\
 #\n\
-# http://mavlink.org/messages/common#ADSB_VEHICLE\n\
+# https://mavlink.io/en/messages/common.html#ADSB_VEHICLE\n\
 \n\
 # [[[cog:\n\
 # from pymavlink.dialects.v20 import common\n\

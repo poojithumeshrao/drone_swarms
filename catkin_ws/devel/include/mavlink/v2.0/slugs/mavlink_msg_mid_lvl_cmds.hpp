@@ -20,7 +20,7 @@ struct MID_LVL_CMDS : mavlink::Message {
 
 
     uint8_t target; /*<  The system setting the commands */
-    float hCommand; /*< [m] Commanded Altitude */
+    float hCommand; /*< [m] Commanded altitude (MSL) */
     float uCommand; /*< [m/s] Commanded Airspeed */
     float rCommand; /*< [rad/s] Commanded Turnrate */
 

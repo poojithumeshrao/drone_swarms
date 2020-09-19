@@ -9,6 +9,7 @@ CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/ASLUAV/./mavlink_msg_command_long_stamped.hpp
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/ASLUAV/./mavlink_msg_ekf_ext.hpp
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/ASLUAV/./mavlink_msg_fw_soaring_data.hpp
+CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/ASLUAV/./mavlink_msg_gsm_link_status.hpp
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/ASLUAV/./mavlink_msg_sens_atmos.hpp
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/ASLUAV/./mavlink_msg_sens_batmon.hpp
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/ASLUAV/./mavlink_msg_sens_mppt.hpp
@@ -98,6 +99,7 @@ CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_camera_information.hpp
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_camera_settings.hpp
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_camera_trigger.hpp
+CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_cellular_status.hpp
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_change_operator_control.hpp
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_change_operator_control_ack.hpp
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_collision.hpp
@@ -108,6 +110,7 @@ CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_data_stream.hpp
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_data_transmission_handshake.hpp
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_debug.hpp
+CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_debug_float_array.hpp
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_debug_vect.hpp
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_distance_sensor.hpp
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_encapsulated_data.hpp
@@ -179,6 +182,7 @@ CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_odometry.hpp
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_optical_flow.hpp
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_optical_flow_rad.hpp
+CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_orbit_execution_status.hpp
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_param_ext_ack.hpp
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_param_ext_request_list.hpp
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_param_ext_request_read.hpp
@@ -221,10 +225,10 @@ CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_set_mode.hpp
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_set_position_target_global_int.hpp
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_set_position_target_local_ned.hpp
-CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_set_video_stream_settings.hpp
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_setup_signing.hpp
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_sim_state.hpp
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_statustext.hpp
+CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_statustext_long.hpp
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_storage_information.hpp
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_sys_status.hpp
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_system_time.hpp
@@ -237,13 +241,16 @@ CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_trajectory_representation_waypoints.hpp
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_uavcan_node_info.hpp
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_uavcan_node_status.hpp
+CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_utm_global_position.hpp
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_v2_extension.hpp
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_vfr_hud.hpp
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_vibration.hpp
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_vicon_position_estimate.hpp
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_video_stream_information.hpp
+CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_video_stream_status.hpp
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_vision_position_estimate.hpp
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_vision_speed_estimate.hpp
+CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_wheel_distance.hpp
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_wifi_config_ap.hpp
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/./mavlink_msg_wind_cov.hpp
 CMakeFiles/mavros_node.dir/src/mavros_node.cpp.o: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/common.hpp

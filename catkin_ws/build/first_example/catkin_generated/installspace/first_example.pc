@@ -1,8 +1,0 @@
-prefix=/home/poojith/catkin_ws/install
-
-Name: first_example
-Description: Description of first_example
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/poojith/catkin_ws/install/lib 
-Requires: 

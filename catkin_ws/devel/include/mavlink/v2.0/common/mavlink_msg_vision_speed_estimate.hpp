@@ -9,7 +9,7 @@ namespace msg {
 /**
  * @brief VISION_SPEED_ESTIMATE message
  *
- * 
+ * Speed estimate from a vision source.
  */
 struct VISION_SPEED_ESTIMATE : mavlink::Message {
     static constexpr msgid_t MSG_ID = 103;

@@ -20,31 +20,38 @@
 
 (defclass mavros_msgs::CommandTriggerControlRequest
   :super ros::object
-  :slots (_trigger_enable _cycle_time ))
+  :slots (_trigger_enable _sequence_reset _trigger_pause ))
 
 (defmethod mavros_msgs::CommandTriggerControlRequest
   (:init
    (&key
     ((:trigger_enable __trigger_enable) nil)
-    ((:cycle_time __cycle_time) 0.0)
+    ((:sequence_reset __sequence_reset) nil)
+    ((:trigger_pause __trigger_pause) nil)
     )
    (send-super :init)
    (setq _trigger_enable __trigger_enable)
-   (setq _cycle_time (float __cycle_time))
+   (setq _sequence_reset __sequence_reset)
+   (setq _trigger_pause __trigger_pause)
    self)
   (:trigger_enable
    (&optional __trigger_enable)
    (if __trigger_enable (setq _trigger_enable __trigger_enable)) _trigger_enable)
-  (:cycle_time
-   (&optional __cycle_time)
-   (if __cycle_time (setq _cycle_time __cycle_time)) _cycle_time)
+  (:sequence_reset
+   (&optional __sequence_reset)
+   (if __sequence_reset (setq _sequence_reset __sequence_reset)) _sequence_reset)
+  (:trigger_pause
+   (&optional __trigger_pause)
+   (if __trigger_pause (setq _trigger_pause __trigger_pause)) _trigger_pause)
   (:serialization-length
    ()
    (+
     ;; bool _trigger_enable
     1
-    ;; float32 _cycle_time
-    4
+    ;; bool _sequence_reset
+    1
+    ;; bool _trigger_pause
+    1
     ))
   (:serialize
    (&optional strm)
@@ -52,16 +59,20 @@
               (make-string-output-stream (send self :serialization-length)))))
      ;; bool _trigger_enable
        (if _trigger_enable (write-byte -1 s) (write-byte 0 s))
-     ;; float32 _cycle_time
-       (sys::poke _cycle_time (send s :buffer) (send s :count) :float) (incf (stream-count s) 4)
+     ;; bool _sequence_reset
+       (if _sequence_reset (write-byte -1 s) (write-byte 0 s))
+     ;; bool _trigger_pause
+       (if _trigger_pause (write-byte -1 s) (write-byte 0 s))
      ;;
      (if (null strm) (get-output-stream-string s))))
   (:deserialize
    (buf &optional (ptr- 0))
    ;; bool _trigger_enable
      (setq _trigger_enable (not (= 0 (sys::peek buf ptr- :char)))) (incf ptr- 1)
-   ;; float32 _cycle_time
-     (setq _cycle_time (sys::peek buf ptr- :float)) (incf ptr- 4)
+   ;; bool _sequence_reset
+     (setq _sequence_reset (not (= 0 (sys::peek buf ptr- :char)))) (incf ptr- 1)
+   ;; bool _trigger_pause
+     (setq _trigger_pause (not (= 0 (sys::peek buf ptr- :char)))) (incf ptr- 1)
    ;;
    self)
   )
@@ -118,7 +129,7 @@
   :super ros::object
   :slots ())
 
-(setf (get mavros_msgs::CommandTriggerControl :md5sum-) "7036c5f362c09a051915015871ce633d")
+(setf (get mavros_msgs::CommandTriggerControl :md5sum-) "65be46a6918cb61b7dceb7c9ba9b1c97")
 (setf (get mavros_msgs::CommandTriggerControl :datatype-) "mavros_msgs/CommandTriggerControl")
 (setf (get mavros_msgs::CommandTriggerControl :request) mavros_msgs::CommandTriggerControlRequest)
 (setf (get mavros_msgs::CommandTriggerControl :response) mavros_msgs::CommandTriggerControlResponse)
@@ -126,26 +137,28 @@
 (defmethod mavros_msgs::CommandTriggerControlRequest
   (:response () (instance mavros_msgs::CommandTriggerControlResponse :init)))
 
-(setf (get mavros_msgs::CommandTriggerControlRequest :md5sum-) "7036c5f362c09a051915015871ce633d")
+(setf (get mavros_msgs::CommandTriggerControlRequest :md5sum-) "65be46a6918cb61b7dceb7c9ba9b1c97")
 (setf (get mavros_msgs::CommandTriggerControlRequest :datatype-) "mavros_msgs/CommandTriggerControlRequest")
 (setf (get mavros_msgs::CommandTriggerControlRequest :definition-)
       "
 
 bool    trigger_enable
-float32 cycle_time
+bool    sequence_reset
+bool    trigger_pause
 ---
 bool success
 uint8 result
 
 ")
 
-(setf (get mavros_msgs::CommandTriggerControlResponse :md5sum-) "7036c5f362c09a051915015871ce633d")
+(setf (get mavros_msgs::CommandTriggerControlResponse :md5sum-) "65be46a6918cb61b7dceb7c9ba9b1c97")
 (setf (get mavros_msgs::CommandTriggerControlResponse :datatype-) "mavros_msgs/CommandTriggerControlResponse")
 (setf (get mavros_msgs::CommandTriggerControlResponse :definition-)
       "
 
 bool    trigger_enable
-float32 cycle_time
+bool    sequence_reset
+bool    trigger_pause
 ---
 bool success
 uint8 result
@@ -154,6 +167,6 @@ uint8 result
 
 
 
-(provide :mavros_msgs/CommandTriggerControl "7036c5f362c09a051915015871ce633d")
+(provide :mavros_msgs/CommandTriggerControl "65be46a6918cb61b7dceb7c9ba9b1c97")
 
 

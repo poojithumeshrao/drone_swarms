@@ -9,7 +9,7 @@ namespace msg {
 /**
  * @brief LANDING_TARGET message
  *
- * The location of a landing area captured from a downward facing camera
+ * The location of a landing target. See: https://mavlink.io/en/services/landing_target.html
  */
 struct LANDING_TARGET : mavlink::Message {
     static constexpr msgid_t MSG_ID = 149;
@@ -27,12 +27,12 @@ struct LANDING_TARGET : mavlink::Message {
     float distance; /*< [m] Distance to the target from the vehicle */
     float size_x; /*< [rad] Size of target along x-axis */
     float size_y; /*< [rad] Size of target along y-axis */
-    float x; /*< [m] X Position of the landing target on MAV_FRAME */
-    float y; /*< [m] Y Position of the landing target on MAV_FRAME */
-    float z; /*< [m] Z Position of the landing target on MAV_FRAME */
+    float x; /*< [m] X Position of the landing target in MAV_FRAME */
+    float y; /*< [m] Y Position of the landing target in MAV_FRAME */
+    float z; /*< [m] Z Position of the landing target in MAV_FRAME */
     std::array<float, 4> q; /*<  Quaternion of landing target orientation (w, x, y, z order, zero-rotation is 1, 0, 0, 0) */
     uint8_t type; /*<  Type of landing target */
-    uint8_t position_valid; /*<  Boolean indicating known position (1) or default unknown position (0), for validation of positioning of the landing target */
+    uint8_t position_valid; /*<  Boolean indicating whether the position fields (x, y, z, q, type) contain valid target position information (valid: 1, invalid: 0). Default is 0 (invalid). */
 
 
     inline std::string get_name(void) const override

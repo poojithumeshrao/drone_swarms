@@ -1,8 +1,0 @@
-prefix=/home/poojith/catkin_ws/install
-
-Name: obj_det
-Description: Description of obj_det
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/poojith/catkin_ws/install/lib 
-Requires: 

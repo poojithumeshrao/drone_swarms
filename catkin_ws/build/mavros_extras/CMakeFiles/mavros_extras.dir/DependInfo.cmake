@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/adsb.cpp" "/home/poojith/catkin_ws/build/mavros_extras/CMakeFiles/mavros_extras.dir/src/plugins/adsb.cpp.o"
   "/home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/cam_imu_sync.cpp" "/home/poojith/catkin_ws/build/mavros_extras/CMakeFiles/mavros_extras.dir/src/plugins/cam_imu_sync.cpp.o"
+  "/home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/companion_process_status.cpp" "/home/poojith/catkin_ws/build/mavros_extras/CMakeFiles/mavros_extras.dir/src/plugins/companion_process_status.cpp.o"
   "/home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/debug_value.cpp" "/home/poojith/catkin_ws/build/mavros_extras/CMakeFiles/mavros_extras.dir/src/plugins/debug_value.cpp.o"
   "/home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/distance_sensor.cpp" "/home/poojith/catkin_ws/build/mavros_extras/CMakeFiles/mavros_extras.dir/src/plugins/distance_sensor.cpp.o"
   "/home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/fake_gps.cpp" "/home/poojith/catkin_ws/build/mavros_extras/CMakeFiles/mavros_extras.dir/src/plugins/fake_gps.cpp.o"
@@ -20,6 +21,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/vibration.cpp" "/home/poojith/catkin_ws/build/mavros_extras/CMakeFiles/mavros_extras.dir/src/plugins/vibration.cpp.o"
   "/home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/vision_pose_estimate.cpp" "/home/poojith/catkin_ws/build/mavros_extras/CMakeFiles/mavros_extras.dir/src/plugins/vision_pose_estimate.cpp.o"
   "/home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/vision_speed_estimate.cpp" "/home/poojith/catkin_ws/build/mavros_extras/CMakeFiles/mavros_extras.dir/src/plugins/vision_speed_estimate.cpp.o"
+  "/home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/wheel_odometry.cpp" "/home/poojith/catkin_ws/build/mavros_extras/CMakeFiles/mavros_extras.dir/src/plugins/wheel_odometry.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

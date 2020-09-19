@@ -169,7 +169,7 @@ class Trajectory {
     // Returns full string definition for message
     return `
     # MAVLink message: TRAJECTORY
-    # http://mavlink.org/messages/common#TRAJECTORY
+    # https://mavlink.io/en/messages/common.html#TRAJECTORY
     
     std_msgs/Header header
     

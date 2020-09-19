@@ -290,7 +290,7 @@
 (setf (get mavros_msgs::ADSBVehicle :definition-)
       "# The location and information of an ADSB vehicle
 #
-# http://mavlink.org/messages/common#ADSB_VEHICLE
+# https://mavlink.io/en/messages/common.html#ADSB_VEHICLE
 
 # [[[cog:
 # from pymavlink.dialects.v20 import common

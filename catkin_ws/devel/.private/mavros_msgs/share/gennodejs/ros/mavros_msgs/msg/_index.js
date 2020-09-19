@@ -14,7 +14,6 @@ let Waypoint = require('./Waypoint.js');
 let LogData = require('./LogData.js');
 let VFR_HUD = require('./VFR_HUD.js');
 let WaypointList = require('./WaypointList.js');
-let control = require('./control.js');
 let ParamValue = require('./ParamValue.js');
 let PositionTarget = require('./PositionTarget.js');
 let StatusText = require('./StatusText.js');
@@ -60,7 +59,6 @@ module.exports = {
   LogData: LogData,
   VFR_HUD: VFR_HUD,
   WaypointList: WaypointList,
-  control: control,
   ParamValue: ParamValue,
   PositionTarget: PositionTarget,
   StatusText: StatusText,

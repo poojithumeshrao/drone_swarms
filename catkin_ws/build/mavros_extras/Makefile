@@ -1390,6 +1390,33 @@ src/plugins/cam_imu_sync.cpp.s:
 	$(MAKE) -f CMakeFiles/mavros_extras.dir/build.make CMakeFiles/mavros_extras.dir/src/plugins/cam_imu_sync.cpp.s
 .PHONY : src/plugins/cam_imu_sync.cpp.s
 
+src/plugins/companion_process_status.o: src/plugins/companion_process_status.cpp.o
+
+.PHONY : src/plugins/companion_process_status.o
+
+# target to build an object file
+src/plugins/companion_process_status.cpp.o:
+	$(MAKE) -f CMakeFiles/mavros_extras.dir/build.make CMakeFiles/mavros_extras.dir/src/plugins/companion_process_status.cpp.o
+.PHONY : src/plugins/companion_process_status.cpp.o
+
+src/plugins/companion_process_status.i: src/plugins/companion_process_status.cpp.i
+
+.PHONY : src/plugins/companion_process_status.i
+
+# target to preprocess a source file
+src/plugins/companion_process_status.cpp.i:
+	$(MAKE) -f CMakeFiles/mavros_extras.dir/build.make CMakeFiles/mavros_extras.dir/src/plugins/companion_process_status.cpp.i
+.PHONY : src/plugins/companion_process_status.cpp.i
+
+src/plugins/companion_process_status.s: src/plugins/companion_process_status.cpp.s
+
+.PHONY : src/plugins/companion_process_status.s
+
+# target to generate assembly for a file
+src/plugins/companion_process_status.cpp.s:
+	$(MAKE) -f CMakeFiles/mavros_extras.dir/build.make CMakeFiles/mavros_extras.dir/src/plugins/companion_process_status.cpp.s
+.PHONY : src/plugins/companion_process_status.cpp.s
+
 src/plugins/debug_value.o: src/plugins/debug_value.cpp.o
 
 .PHONY : src/plugins/debug_value.o
@@ -1768,6 +1795,33 @@ src/plugins/vision_speed_estimate.cpp.s:
 	$(MAKE) -f CMakeFiles/mavros_extras.dir/build.make CMakeFiles/mavros_extras.dir/src/plugins/vision_speed_estimate.cpp.s
 .PHONY : src/plugins/vision_speed_estimate.cpp.s
 
+src/plugins/wheel_odometry.o: src/plugins/wheel_odometry.cpp.o
+
+.PHONY : src/plugins/wheel_odometry.o
+
+# target to build an object file
+src/plugins/wheel_odometry.cpp.o:
+	$(MAKE) -f CMakeFiles/mavros_extras.dir/build.make CMakeFiles/mavros_extras.dir/src/plugins/wheel_odometry.cpp.o
+.PHONY : src/plugins/wheel_odometry.cpp.o
+
+src/plugins/wheel_odometry.i: src/plugins/wheel_odometry.cpp.i
+
+.PHONY : src/plugins/wheel_odometry.i
+
+# target to preprocess a source file
+src/plugins/wheel_odometry.cpp.i:
+	$(MAKE) -f CMakeFiles/mavros_extras.dir/build.make CMakeFiles/mavros_extras.dir/src/plugins/wheel_odometry.cpp.i
+.PHONY : src/plugins/wheel_odometry.cpp.i
+
+src/plugins/wheel_odometry.s: src/plugins/wheel_odometry.cpp.s
+
+.PHONY : src/plugins/wheel_odometry.s
+
+# target to generate assembly for a file
+src/plugins/wheel_odometry.cpp.s:
+	$(MAKE) -f CMakeFiles/mavros_extras.dir/build.make CMakeFiles/mavros_extras.dir/src/plugins/wheel_odometry.cpp.s
+.PHONY : src/plugins/wheel_odometry.cpp.s
+
 src/servo_state_publisher.o: src/servo_state_publisher.cpp.o
 
 .PHONY : src/servo_state_publisher.o
@@ -1905,6 +1959,9 @@ help:
 	@echo "... src/plugins/cam_imu_sync.o"
 	@echo "... src/plugins/cam_imu_sync.i"
 	@echo "... src/plugins/cam_imu_sync.s"
+	@echo "... src/plugins/companion_process_status.o"
+	@echo "... src/plugins/companion_process_status.i"
+	@echo "... src/plugins/companion_process_status.s"
 	@echo "... src/plugins/debug_value.o"
 	@echo "... src/plugins/debug_value.i"
 	@echo "... src/plugins/debug_value.s"
@@ -1947,6 +2004,9 @@ help:
 	@echo "... src/plugins/vision_speed_estimate.o"
 	@echo "... src/plugins/vision_speed_estimate.i"
 	@echo "... src/plugins/vision_speed_estimate.s"
+	@echo "... src/plugins/wheel_odometry.o"
+	@echo "... src/plugins/wheel_odometry.i"
+	@echo "... src/plugins/wheel_odometry.s"
 	@echo "... src/servo_state_publisher.o"
 	@echo "... src/servo_state_publisher.i"
 	@echo "... src/servo_state_publisher.s"

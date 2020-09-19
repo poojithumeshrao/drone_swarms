@@ -189,10 +189,10 @@ struct Definition< ::mavros_msgs::DebugValue_<ContainerAllocator> >
     return "# Msg for Debug MAVLink API\n\
 #\n\
 # Supported types:\n\
-# DEBUG			http://mavlink.org/messages/common#DEBUG\n\
-# DEBUG_VECTOR			http://mavlink.org/messages/common#DEBUG_VECT\n\
-# NAMED_VALUE_FLOAT		http://mavlink.org/messages/common#NAMED_VALUE_FLOAT\n\
-# NAMED_VALUE_INT		http://mavlink.org/messages/common#NAMED_VALUE_INT\n\
+# DEBUG			https://mavlink.io/en/messages/common.html#DEBUG\n\
+# DEBUG_VECTOR			https://mavlink.io/en/messages/common.html#DEBUG_VECT\n\
+# NAMED_VALUE_FLOAT		https://mavlink.io/en/messages/common.html#NAMED_VALUE_FLOAT\n\
+# NAMED_VALUE_INT		https://mavlink.io/en/messages/common.html#NAMED_VALUE_INT\n\
 # @TODO: add support for DEBUG_ARRAY (https://github.com/mavlink/mavlink/pull/734)\n\
 \n\
 std_msgs/Header header\n\

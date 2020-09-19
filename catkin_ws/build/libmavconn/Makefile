@@ -412,6 +412,33 @@ gtest_main/fast:
 	$(MAKE) -f gtest/gtest/CMakeFiles/gtest_main.dir/build.make gtest/gtest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
+catkin_generated/src/mavlink_helpers.o: catkin_generated/src/mavlink_helpers.cpp.o
+
+.PHONY : catkin_generated/src/mavlink_helpers.o
+
+# target to build an object file
+catkin_generated/src/mavlink_helpers.cpp.o:
+	$(MAKE) -f CMakeFiles/mavconn.dir/build.make CMakeFiles/mavconn.dir/catkin_generated/src/mavlink_helpers.cpp.o
+.PHONY : catkin_generated/src/mavlink_helpers.cpp.o
+
+catkin_generated/src/mavlink_helpers.i: catkin_generated/src/mavlink_helpers.cpp.i
+
+.PHONY : catkin_generated/src/mavlink_helpers.i
+
+# target to preprocess a source file
+catkin_generated/src/mavlink_helpers.cpp.i:
+	$(MAKE) -f CMakeFiles/mavconn.dir/build.make CMakeFiles/mavconn.dir/catkin_generated/src/mavlink_helpers.cpp.i
+.PHONY : catkin_generated/src/mavlink_helpers.cpp.i
+
+catkin_generated/src/mavlink_helpers.s: catkin_generated/src/mavlink_helpers.cpp.s
+
+.PHONY : catkin_generated/src/mavlink_helpers.s
+
+# target to generate assembly for a file
+catkin_generated/src/mavlink_helpers.cpp.s:
+	$(MAKE) -f CMakeFiles/mavconn.dir/build.make CMakeFiles/mavconn.dir/catkin_generated/src/mavlink_helpers.cpp.s
+.PHONY : catkin_generated/src/mavlink_helpers.cpp.s
+
 src/interface.o: src/interface.cpp.o
 
 .PHONY : src/interface.o
@@ -438,33 +465,6 @@ src/interface.s: src/interface.cpp.s
 src/interface.cpp.s:
 	$(MAKE) -f CMakeFiles/mavconn.dir/build.make CMakeFiles/mavconn.dir/src/interface.cpp.s
 .PHONY : src/interface.cpp.s
-
-src/mavlink_helpers.o: src/mavlink_helpers.cpp.o
-
-.PHONY : src/mavlink_helpers.o
-
-# target to build an object file
-src/mavlink_helpers.cpp.o:
-	$(MAKE) -f CMakeFiles/mavconn.dir/build.make CMakeFiles/mavconn.dir/src/mavlink_helpers.cpp.o
-.PHONY : src/mavlink_helpers.cpp.o
-
-src/mavlink_helpers.i: src/mavlink_helpers.cpp.i
-
-.PHONY : src/mavlink_helpers.i
-
-# target to preprocess a source file
-src/mavlink_helpers.cpp.i:
-	$(MAKE) -f CMakeFiles/mavconn.dir/build.make CMakeFiles/mavconn.dir/src/mavlink_helpers.cpp.i
-.PHONY : src/mavlink_helpers.cpp.i
-
-src/mavlink_helpers.s: src/mavlink_helpers.cpp.s
-
-.PHONY : src/mavlink_helpers.s
-
-# target to generate assembly for a file
-src/mavlink_helpers.cpp.s:
-	$(MAKE) -f CMakeFiles/mavconn.dir/build.make CMakeFiles/mavconn.dir/src/mavlink_helpers.cpp.s
-.PHONY : src/mavlink_helpers.cpp.s
 
 src/serial.o: src/serial.cpp.o
 
@@ -606,12 +606,12 @@ help:
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... catkin_generated/src/mavlink_helpers.o"
+	@echo "... catkin_generated/src/mavlink_helpers.i"
+	@echo "... catkin_generated/src/mavlink_helpers.s"
 	@echo "... src/interface.o"
 	@echo "... src/interface.i"
 	@echo "... src/interface.s"
-	@echo "... src/mavlink_helpers.o"
-	@echo "... src/mavlink_helpers.i"
-	@echo "... src/mavlink_helpers.s"
 	@echo "... src/serial.o"
 	@echo "... src/serial.i"
 	@echo "... src/serial.s"

@@ -46,7 +46,7 @@ struct LogData_
    typedef uint16_t _id_type;
   _id_type id;
 
-   typedef uint16_t _offset_type;
+   typedef uint32_t _offset_type;
   _offset_type offset;
 
    typedef std::vector<uint8_t, typename ContainerAllocator::template rebind<uint8_t>::other >  _data_type;
@@ -130,12 +130,12 @@ struct MD5Sum< ::mavros_msgs::LogData_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "14a66e2d37c1acdd20c8a2e9681ab562";
+    return "ccaa27ba630f8f5d02c287763eb1e91b";
   }
 
   static const char* value(const ::mavros_msgs::LogData_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x14a66e2d37c1acddULL;
-  static const uint64_t static_value2 = 0x20c8a2e9681ab562ULL;
+  static const uint64_t static_value1 = 0xccaa27ba630f8f5dULL;
+  static const uint64_t static_value2 = 0x02c287763eb1e91bULL;
 };
 
 template<class ContainerAllocator>
@@ -163,7 +163,7 @@ struct Definition< ::mavros_msgs::LogData_<ContainerAllocator> >
 std_msgs/Header header\n\
 \n\
 uint16 id\n\
-uint16 offset\n\
+uint32 offset\n\
 uint8[] data\n\
 \n\
 ================================================================================\n\
@@ -229,7 +229,7 @@ struct Printer< ::mavros_msgs::LogData_<ContainerAllocator> >
     s << indent << "id: ";
     Printer<uint16_t>::stream(s, indent + "  ", v.id);
     s << indent << "offset: ";
-    Printer<uint16_t>::stream(s, indent + "  ", v.offset);
+    Printer<uint32_t>::stream(s, indent + "  ", v.offset);
     s << indent << "data[]" << std::endl;
     for (size_t i = 0; i < v.data.size(); ++i)
     {

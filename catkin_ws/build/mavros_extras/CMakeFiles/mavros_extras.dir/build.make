@@ -81,9 +81,33 @@ CMakeFiles/mavros_extras.dir/src/plugins/adsb.cpp.o.provides: CMakeFiles/mavros_
 CMakeFiles/mavros_extras.dir/src/plugins/adsb.cpp.o.provides.build: CMakeFiles/mavros_extras.dir/src/plugins/adsb.cpp.o
 
 
+CMakeFiles/mavros_extras.dir/src/plugins/companion_process_status.cpp.o: CMakeFiles/mavros_extras.dir/flags.make
+CMakeFiles/mavros_extras.dir/src/plugins/companion_process_status.cpp.o: /home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/companion_process_status.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/poojith/catkin_ws/build/mavros_extras/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/mavros_extras.dir/src/plugins/companion_process_status.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mavros_extras.dir/src/plugins/companion_process_status.cpp.o -c /home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/companion_process_status.cpp
+
+CMakeFiles/mavros_extras.dir/src/plugins/companion_process_status.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mavros_extras.dir/src/plugins/companion_process_status.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/companion_process_status.cpp > CMakeFiles/mavros_extras.dir/src/plugins/companion_process_status.cpp.i
+
+CMakeFiles/mavros_extras.dir/src/plugins/companion_process_status.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mavros_extras.dir/src/plugins/companion_process_status.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/companion_process_status.cpp -o CMakeFiles/mavros_extras.dir/src/plugins/companion_process_status.cpp.s
+
+CMakeFiles/mavros_extras.dir/src/plugins/companion_process_status.cpp.o.requires:
+
+.PHONY : CMakeFiles/mavros_extras.dir/src/plugins/companion_process_status.cpp.o.requires
+
+CMakeFiles/mavros_extras.dir/src/plugins/companion_process_status.cpp.o.provides: CMakeFiles/mavros_extras.dir/src/plugins/companion_process_status.cpp.o.requires
+	$(MAKE) -f CMakeFiles/mavros_extras.dir/build.make CMakeFiles/mavros_extras.dir/src/plugins/companion_process_status.cpp.o.provides.build
+.PHONY : CMakeFiles/mavros_extras.dir/src/plugins/companion_process_status.cpp.o.provides
+
+CMakeFiles/mavros_extras.dir/src/plugins/companion_process_status.cpp.o.provides.build: CMakeFiles/mavros_extras.dir/src/plugins/companion_process_status.cpp.o
+
+
 CMakeFiles/mavros_extras.dir/src/plugins/cam_imu_sync.cpp.o: CMakeFiles/mavros_extras.dir/flags.make
 CMakeFiles/mavros_extras.dir/src/plugins/cam_imu_sync.cpp.o: /home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/cam_imu_sync.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/poojith/catkin_ws/build/mavros_extras/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/mavros_extras.dir/src/plugins/cam_imu_sync.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/poojith/catkin_ws/build/mavros_extras/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/mavros_extras.dir/src/plugins/cam_imu_sync.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mavros_extras.dir/src/plugins/cam_imu_sync.cpp.o -c /home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/cam_imu_sync.cpp
 
 CMakeFiles/mavros_extras.dir/src/plugins/cam_imu_sync.cpp.i: cmake_force
@@ -107,7 +131,7 @@ CMakeFiles/mavros_extras.dir/src/plugins/cam_imu_sync.cpp.o.provides.build: CMak
 
 CMakeFiles/mavros_extras.dir/src/plugins/debug_value.cpp.o: CMakeFiles/mavros_extras.dir/flags.make
 CMakeFiles/mavros_extras.dir/src/plugins/debug_value.cpp.o: /home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/debug_value.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/poojith/catkin_ws/build/mavros_extras/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/mavros_extras.dir/src/plugins/debug_value.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/poojith/catkin_ws/build/mavros_extras/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/mavros_extras.dir/src/plugins/debug_value.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mavros_extras.dir/src/plugins/debug_value.cpp.o -c /home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/debug_value.cpp
 
 CMakeFiles/mavros_extras.dir/src/plugins/debug_value.cpp.i: cmake_force
@@ -131,7 +155,7 @@ CMakeFiles/mavros_extras.dir/src/plugins/debug_value.cpp.o.provides.build: CMake
 
 CMakeFiles/mavros_extras.dir/src/plugins/distance_sensor.cpp.o: CMakeFiles/mavros_extras.dir/flags.make
 CMakeFiles/mavros_extras.dir/src/plugins/distance_sensor.cpp.o: /home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/distance_sensor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/poojith/catkin_ws/build/mavros_extras/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/mavros_extras.dir/src/plugins/distance_sensor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/poojith/catkin_ws/build/mavros_extras/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/mavros_extras.dir/src/plugins/distance_sensor.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mavros_extras.dir/src/plugins/distance_sensor.cpp.o -c /home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/distance_sensor.cpp
 
 CMakeFiles/mavros_extras.dir/src/plugins/distance_sensor.cpp.i: cmake_force
@@ -155,7 +179,7 @@ CMakeFiles/mavros_extras.dir/src/plugins/distance_sensor.cpp.o.provides.build: C
 
 CMakeFiles/mavros_extras.dir/src/plugins/fake_gps.cpp.o: CMakeFiles/mavros_extras.dir/flags.make
 CMakeFiles/mavros_extras.dir/src/plugins/fake_gps.cpp.o: /home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/fake_gps.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/poojith/catkin_ws/build/mavros_extras/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/mavros_extras.dir/src/plugins/fake_gps.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/poojith/catkin_ws/build/mavros_extras/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/mavros_extras.dir/src/plugins/fake_gps.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mavros_extras.dir/src/plugins/fake_gps.cpp.o -c /home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/fake_gps.cpp
 
 CMakeFiles/mavros_extras.dir/src/plugins/fake_gps.cpp.i: cmake_force
@@ -179,7 +203,7 @@ CMakeFiles/mavros_extras.dir/src/plugins/fake_gps.cpp.o.provides.build: CMakeFil
 
 CMakeFiles/mavros_extras.dir/src/plugins/gps_rtk.cpp.o: CMakeFiles/mavros_extras.dir/flags.make
 CMakeFiles/mavros_extras.dir/src/plugins/gps_rtk.cpp.o: /home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/gps_rtk.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/poojith/catkin_ws/build/mavros_extras/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/mavros_extras.dir/src/plugins/gps_rtk.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/poojith/catkin_ws/build/mavros_extras/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/mavros_extras.dir/src/plugins/gps_rtk.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mavros_extras.dir/src/plugins/gps_rtk.cpp.o -c /home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/gps_rtk.cpp
 
 CMakeFiles/mavros_extras.dir/src/plugins/gps_rtk.cpp.i: cmake_force
@@ -203,7 +227,7 @@ CMakeFiles/mavros_extras.dir/src/plugins/gps_rtk.cpp.o.provides.build: CMakeFile
 
 CMakeFiles/mavros_extras.dir/src/plugins/log_transfer.cpp.o: CMakeFiles/mavros_extras.dir/flags.make
 CMakeFiles/mavros_extras.dir/src/plugins/log_transfer.cpp.o: /home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/log_transfer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/poojith/catkin_ws/build/mavros_extras/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/mavros_extras.dir/src/plugins/log_transfer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/poojith/catkin_ws/build/mavros_extras/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/mavros_extras.dir/src/plugins/log_transfer.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mavros_extras.dir/src/plugins/log_transfer.cpp.o -c /home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/log_transfer.cpp
 
 CMakeFiles/mavros_extras.dir/src/plugins/log_transfer.cpp.i: cmake_force
@@ -227,7 +251,7 @@ CMakeFiles/mavros_extras.dir/src/plugins/log_transfer.cpp.o.provides.build: CMak
 
 CMakeFiles/mavros_extras.dir/src/plugins/mocap_pose_estimate.cpp.o: CMakeFiles/mavros_extras.dir/flags.make
 CMakeFiles/mavros_extras.dir/src/plugins/mocap_pose_estimate.cpp.o: /home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/mocap_pose_estimate.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/poojith/catkin_ws/build/mavros_extras/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/mavros_extras.dir/src/plugins/mocap_pose_estimate.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/poojith/catkin_ws/build/mavros_extras/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/mavros_extras.dir/src/plugins/mocap_pose_estimate.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mavros_extras.dir/src/plugins/mocap_pose_estimate.cpp.o -c /home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/mocap_pose_estimate.cpp
 
 CMakeFiles/mavros_extras.dir/src/plugins/mocap_pose_estimate.cpp.i: cmake_force
@@ -251,7 +275,7 @@ CMakeFiles/mavros_extras.dir/src/plugins/mocap_pose_estimate.cpp.o.provides.buil
 
 CMakeFiles/mavros_extras.dir/src/plugins/obstacle_distance.cpp.o: CMakeFiles/mavros_extras.dir/flags.make
 CMakeFiles/mavros_extras.dir/src/plugins/obstacle_distance.cpp.o: /home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/obstacle_distance.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/poojith/catkin_ws/build/mavros_extras/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/mavros_extras.dir/src/plugins/obstacle_distance.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/poojith/catkin_ws/build/mavros_extras/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/mavros_extras.dir/src/plugins/obstacle_distance.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mavros_extras.dir/src/plugins/obstacle_distance.cpp.o -c /home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/obstacle_distance.cpp
 
 CMakeFiles/mavros_extras.dir/src/plugins/obstacle_distance.cpp.i: cmake_force
@@ -275,7 +299,7 @@ CMakeFiles/mavros_extras.dir/src/plugins/obstacle_distance.cpp.o.provides.build:
 
 CMakeFiles/mavros_extras.dir/src/plugins/odom.cpp.o: CMakeFiles/mavros_extras.dir/flags.make
 CMakeFiles/mavros_extras.dir/src/plugins/odom.cpp.o: /home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/odom.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/poojith/catkin_ws/build/mavros_extras/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/mavros_extras.dir/src/plugins/odom.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/poojith/catkin_ws/build/mavros_extras/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/mavros_extras.dir/src/plugins/odom.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mavros_extras.dir/src/plugins/odom.cpp.o -c /home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/odom.cpp
 
 CMakeFiles/mavros_extras.dir/src/plugins/odom.cpp.i: cmake_force
@@ -299,7 +323,7 @@ CMakeFiles/mavros_extras.dir/src/plugins/odom.cpp.o.provides.build: CMakeFiles/m
 
 CMakeFiles/mavros_extras.dir/src/plugins/px4flow.cpp.o: CMakeFiles/mavros_extras.dir/flags.make
 CMakeFiles/mavros_extras.dir/src/plugins/px4flow.cpp.o: /home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/px4flow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/poojith/catkin_ws/build/mavros_extras/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/mavros_extras.dir/src/plugins/px4flow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/poojith/catkin_ws/build/mavros_extras/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/mavros_extras.dir/src/plugins/px4flow.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mavros_extras.dir/src/plugins/px4flow.cpp.o -c /home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/px4flow.cpp
 
 CMakeFiles/mavros_extras.dir/src/plugins/px4flow.cpp.i: cmake_force
@@ -323,7 +347,7 @@ CMakeFiles/mavros_extras.dir/src/plugins/px4flow.cpp.o.provides.build: CMakeFile
 
 CMakeFiles/mavros_extras.dir/src/plugins/rangefinder.cpp.o: CMakeFiles/mavros_extras.dir/flags.make
 CMakeFiles/mavros_extras.dir/src/plugins/rangefinder.cpp.o: /home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/rangefinder.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/poojith/catkin_ws/build/mavros_extras/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/mavros_extras.dir/src/plugins/rangefinder.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/poojith/catkin_ws/build/mavros_extras/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/mavros_extras.dir/src/plugins/rangefinder.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mavros_extras.dir/src/plugins/rangefinder.cpp.o -c /home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/rangefinder.cpp
 
 CMakeFiles/mavros_extras.dir/src/plugins/rangefinder.cpp.i: cmake_force
@@ -347,7 +371,7 @@ CMakeFiles/mavros_extras.dir/src/plugins/rangefinder.cpp.o.provides.build: CMake
 
 CMakeFiles/mavros_extras.dir/src/plugins/trajectory.cpp.o: CMakeFiles/mavros_extras.dir/flags.make
 CMakeFiles/mavros_extras.dir/src/plugins/trajectory.cpp.o: /home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/trajectory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/poojith/catkin_ws/build/mavros_extras/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/mavros_extras.dir/src/plugins/trajectory.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/poojith/catkin_ws/build/mavros_extras/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/mavros_extras.dir/src/plugins/trajectory.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mavros_extras.dir/src/plugins/trajectory.cpp.o -c /home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/trajectory.cpp
 
 CMakeFiles/mavros_extras.dir/src/plugins/trajectory.cpp.i: cmake_force
@@ -369,9 +393,33 @@ CMakeFiles/mavros_extras.dir/src/plugins/trajectory.cpp.o.provides: CMakeFiles/m
 CMakeFiles/mavros_extras.dir/src/plugins/trajectory.cpp.o.provides.build: CMakeFiles/mavros_extras.dir/src/plugins/trajectory.cpp.o
 
 
+CMakeFiles/mavros_extras.dir/src/plugins/wheel_odometry.cpp.o: CMakeFiles/mavros_extras.dir/flags.make
+CMakeFiles/mavros_extras.dir/src/plugins/wheel_odometry.cpp.o: /home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/wheel_odometry.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/poojith/catkin_ws/build/mavros_extras/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/mavros_extras.dir/src/plugins/wheel_odometry.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mavros_extras.dir/src/plugins/wheel_odometry.cpp.o -c /home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/wheel_odometry.cpp
+
+CMakeFiles/mavros_extras.dir/src/plugins/wheel_odometry.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mavros_extras.dir/src/plugins/wheel_odometry.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/wheel_odometry.cpp > CMakeFiles/mavros_extras.dir/src/plugins/wheel_odometry.cpp.i
+
+CMakeFiles/mavros_extras.dir/src/plugins/wheel_odometry.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mavros_extras.dir/src/plugins/wheel_odometry.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/wheel_odometry.cpp -o CMakeFiles/mavros_extras.dir/src/plugins/wheel_odometry.cpp.s
+
+CMakeFiles/mavros_extras.dir/src/plugins/wheel_odometry.cpp.o.requires:
+
+.PHONY : CMakeFiles/mavros_extras.dir/src/plugins/wheel_odometry.cpp.o.requires
+
+CMakeFiles/mavros_extras.dir/src/plugins/wheel_odometry.cpp.o.provides: CMakeFiles/mavros_extras.dir/src/plugins/wheel_odometry.cpp.o.requires
+	$(MAKE) -f CMakeFiles/mavros_extras.dir/build.make CMakeFiles/mavros_extras.dir/src/plugins/wheel_odometry.cpp.o.provides.build
+.PHONY : CMakeFiles/mavros_extras.dir/src/plugins/wheel_odometry.cpp.o.provides
+
+CMakeFiles/mavros_extras.dir/src/plugins/wheel_odometry.cpp.o.provides.build: CMakeFiles/mavros_extras.dir/src/plugins/wheel_odometry.cpp.o
+
+
 CMakeFiles/mavros_extras.dir/src/plugins/vibration.cpp.o: CMakeFiles/mavros_extras.dir/flags.make
 CMakeFiles/mavros_extras.dir/src/plugins/vibration.cpp.o: /home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/vibration.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/poojith/catkin_ws/build/mavros_extras/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/mavros_extras.dir/src/plugins/vibration.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/poojith/catkin_ws/build/mavros_extras/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/mavros_extras.dir/src/plugins/vibration.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mavros_extras.dir/src/plugins/vibration.cpp.o -c /home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/vibration.cpp
 
 CMakeFiles/mavros_extras.dir/src/plugins/vibration.cpp.i: cmake_force
@@ -395,7 +443,7 @@ CMakeFiles/mavros_extras.dir/src/plugins/vibration.cpp.o.provides.build: CMakeFi
 
 CMakeFiles/mavros_extras.dir/src/plugins/vision_pose_estimate.cpp.o: CMakeFiles/mavros_extras.dir/flags.make
 CMakeFiles/mavros_extras.dir/src/plugins/vision_pose_estimate.cpp.o: /home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/vision_pose_estimate.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/poojith/catkin_ws/build/mavros_extras/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/mavros_extras.dir/src/plugins/vision_pose_estimate.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/poojith/catkin_ws/build/mavros_extras/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/mavros_extras.dir/src/plugins/vision_pose_estimate.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mavros_extras.dir/src/plugins/vision_pose_estimate.cpp.o -c /home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/vision_pose_estimate.cpp
 
 CMakeFiles/mavros_extras.dir/src/plugins/vision_pose_estimate.cpp.i: cmake_force
@@ -419,7 +467,7 @@ CMakeFiles/mavros_extras.dir/src/plugins/vision_pose_estimate.cpp.o.provides.bui
 
 CMakeFiles/mavros_extras.dir/src/plugins/vision_speed_estimate.cpp.o: CMakeFiles/mavros_extras.dir/flags.make
 CMakeFiles/mavros_extras.dir/src/plugins/vision_speed_estimate.cpp.o: /home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/vision_speed_estimate.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/poojith/catkin_ws/build/mavros_extras/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/mavros_extras.dir/src/plugins/vision_speed_estimate.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/poojith/catkin_ws/build/mavros_extras/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/mavros_extras.dir/src/plugins/vision_speed_estimate.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mavros_extras.dir/src/plugins/vision_speed_estimate.cpp.o -c /home/poojith/catkin_ws/src/mavros/mavros_extras/src/plugins/vision_speed_estimate.cpp
 
 CMakeFiles/mavros_extras.dir/src/plugins/vision_speed_estimate.cpp.i: cmake_force
@@ -444,6 +492,7 @@ CMakeFiles/mavros_extras.dir/src/plugins/vision_speed_estimate.cpp.o.provides.bu
 # Object files for target mavros_extras
 mavros_extras_OBJECTS = \
 "CMakeFiles/mavros_extras.dir/src/plugins/adsb.cpp.o" \
+"CMakeFiles/mavros_extras.dir/src/plugins/companion_process_status.cpp.o" \
 "CMakeFiles/mavros_extras.dir/src/plugins/cam_imu_sync.cpp.o" \
 "CMakeFiles/mavros_extras.dir/src/plugins/debug_value.cpp.o" \
 "CMakeFiles/mavros_extras.dir/src/plugins/distance_sensor.cpp.o" \
@@ -456,6 +505,7 @@ mavros_extras_OBJECTS = \
 "CMakeFiles/mavros_extras.dir/src/plugins/px4flow.cpp.o" \
 "CMakeFiles/mavros_extras.dir/src/plugins/rangefinder.cpp.o" \
 "CMakeFiles/mavros_extras.dir/src/plugins/trajectory.cpp.o" \
+"CMakeFiles/mavros_extras.dir/src/plugins/wheel_odometry.cpp.o" \
 "CMakeFiles/mavros_extras.dir/src/plugins/vibration.cpp.o" \
 "CMakeFiles/mavros_extras.dir/src/plugins/vision_pose_estimate.cpp.o" \
 "CMakeFiles/mavros_extras.dir/src/plugins/vision_speed_estimate.cpp.o"
@@ -464,6 +514,7 @@ mavros_extras_OBJECTS = \
 mavros_extras_EXTERNAL_OBJECTS =
 
 /home/poojith/catkin_ws/devel/.private/mavros_extras/lib/libmavros_extras.so: CMakeFiles/mavros_extras.dir/src/plugins/adsb.cpp.o
+/home/poojith/catkin_ws/devel/.private/mavros_extras/lib/libmavros_extras.so: CMakeFiles/mavros_extras.dir/src/plugins/companion_process_status.cpp.o
 /home/poojith/catkin_ws/devel/.private/mavros_extras/lib/libmavros_extras.so: CMakeFiles/mavros_extras.dir/src/plugins/cam_imu_sync.cpp.o
 /home/poojith/catkin_ws/devel/.private/mavros_extras/lib/libmavros_extras.so: CMakeFiles/mavros_extras.dir/src/plugins/debug_value.cpp.o
 /home/poojith/catkin_ws/devel/.private/mavros_extras/lib/libmavros_extras.so: CMakeFiles/mavros_extras.dir/src/plugins/distance_sensor.cpp.o
@@ -476,6 +527,7 @@ mavros_extras_EXTERNAL_OBJECTS =
 /home/poojith/catkin_ws/devel/.private/mavros_extras/lib/libmavros_extras.so: CMakeFiles/mavros_extras.dir/src/plugins/px4flow.cpp.o
 /home/poojith/catkin_ws/devel/.private/mavros_extras/lib/libmavros_extras.so: CMakeFiles/mavros_extras.dir/src/plugins/rangefinder.cpp.o
 /home/poojith/catkin_ws/devel/.private/mavros_extras/lib/libmavros_extras.so: CMakeFiles/mavros_extras.dir/src/plugins/trajectory.cpp.o
+/home/poojith/catkin_ws/devel/.private/mavros_extras/lib/libmavros_extras.so: CMakeFiles/mavros_extras.dir/src/plugins/wheel_odometry.cpp.o
 /home/poojith/catkin_ws/devel/.private/mavros_extras/lib/libmavros_extras.so: CMakeFiles/mavros_extras.dir/src/plugins/vibration.cpp.o
 /home/poojith/catkin_ws/devel/.private/mavros_extras/lib/libmavros_extras.so: CMakeFiles/mavros_extras.dir/src/plugins/vision_pose_estimate.cpp.o
 /home/poojith/catkin_ws/devel/.private/mavros_extras/lib/libmavros_extras.so: CMakeFiles/mavros_extras.dir/src/plugins/vision_speed_estimate.cpp.o
@@ -583,7 +635,7 @@ mavros_extras_EXTERNAL_OBJECTS =
 /home/poojith/catkin_ws/devel/.private/mavros_extras/lib/libmavros_extras.so: /opt/ros/kinetic/lib/librosconsole_bridge.so
 /home/poojith/catkin_ws/devel/.private/mavros_extras/lib/libmavros_extras.so: /opt/ros/kinetic/lib/libtf.so
 /home/poojith/catkin_ws/devel/.private/mavros_extras/lib/libmavros_extras.so: CMakeFiles/mavros_extras.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/poojith/catkin_ws/build/mavros_extras/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX shared library /home/poojith/catkin_ws/devel/.private/mavros_extras/lib/libmavros_extras.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/poojith/catkin_ws/build/mavros_extras/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX shared library /home/poojith/catkin_ws/devel/.private/mavros_extras/lib/libmavros_extras.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mavros_extras.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -592,6 +644,7 @@ CMakeFiles/mavros_extras.dir/build: /home/poojith/catkin_ws/devel/.private/mavro
 .PHONY : CMakeFiles/mavros_extras.dir/build
 
 CMakeFiles/mavros_extras.dir/requires: CMakeFiles/mavros_extras.dir/src/plugins/adsb.cpp.o.requires
+CMakeFiles/mavros_extras.dir/requires: CMakeFiles/mavros_extras.dir/src/plugins/companion_process_status.cpp.o.requires
 CMakeFiles/mavros_extras.dir/requires: CMakeFiles/mavros_extras.dir/src/plugins/cam_imu_sync.cpp.o.requires
 CMakeFiles/mavros_extras.dir/requires: CMakeFiles/mavros_extras.dir/src/plugins/debug_value.cpp.o.requires
 CMakeFiles/mavros_extras.dir/requires: CMakeFiles/mavros_extras.dir/src/plugins/distance_sensor.cpp.o.requires
@@ -604,6 +657,7 @@ CMakeFiles/mavros_extras.dir/requires: CMakeFiles/mavros_extras.dir/src/plugins/
 CMakeFiles/mavros_extras.dir/requires: CMakeFiles/mavros_extras.dir/src/plugins/px4flow.cpp.o.requires
 CMakeFiles/mavros_extras.dir/requires: CMakeFiles/mavros_extras.dir/src/plugins/rangefinder.cpp.o.requires
 CMakeFiles/mavros_extras.dir/requires: CMakeFiles/mavros_extras.dir/src/plugins/trajectory.cpp.o.requires
+CMakeFiles/mavros_extras.dir/requires: CMakeFiles/mavros_extras.dir/src/plugins/wheel_odometry.cpp.o.requires
 CMakeFiles/mavros_extras.dir/requires: CMakeFiles/mavros_extras.dir/src/plugins/vibration.cpp.o.requires
 CMakeFiles/mavros_extras.dir/requires: CMakeFiles/mavros_extras.dir/src/plugins/vision_pose_estimate.cpp.o.requires
 CMakeFiles/mavros_extras.dir/requires: CMakeFiles/mavros_extras.dir/src/plugins/vision_speed_estimate.cpp.o.requires

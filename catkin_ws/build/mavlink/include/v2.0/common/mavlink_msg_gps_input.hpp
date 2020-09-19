@@ -27,7 +27,7 @@ struct GPS_INPUT : mavlink::Message {
     uint8_t fix_type; /*<  0-1: no fix, 2: 2D fix, 3: 3D fix. 4: 3D with DGPS. 5: 3D with RTK */
     int32_t lat; /*< [degE7] Latitude (WGS84) */
     int32_t lon; /*< [degE7] Longitude (WGS84) */
-    float alt; /*< [m] Altitude (AMSL). Positive for up. */
+    float alt; /*< [m] Altitude (MSL). Positive for up. */
     float hdop; /*< [m] GPS HDOP horizontal dilution of position */
     float vdop; /*< [m] GPS VDOP vertical dilution of position */
     float vn; /*< [m/s] GPS velocity in NORTH direction in earth-fixed NED frame */

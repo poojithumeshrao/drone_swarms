@@ -16,7 +16,7 @@ class HilSensor(genpy.Message):
 #
 # ROS representation of MAVLink HIL_SENSOR
 # See mavlink message documentation here:
-# https://pixhawk.ethz.ch/mavlink/#HIL_SENSOR
+# https://mavlink.io/en/messages/common.html#HIL_SENSOR
 
 std_msgs/Header header
 

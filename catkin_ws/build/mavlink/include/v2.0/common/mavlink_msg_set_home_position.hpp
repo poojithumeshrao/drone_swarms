@@ -22,7 +22,7 @@ struct SET_HOME_POSITION : mavlink::Message {
     uint8_t target_system; /*<  System ID. */
     int32_t latitude; /*< [degE7] Latitude (WGS84) */
     int32_t longitude; /*< [degE7] Longitude (WGS84) */
-    int32_t altitude; /*< [mm] Altitude (AMSL). Positive for up. */
+    int32_t altitude; /*< [mm] Altitude (MSL). Positive for up. */
     float x; /*< [m] Local X position of this position in the local coordinate frame */
     float y; /*< [m] Local Y position of this position in the local coordinate frame */
     float z; /*< [m] Local Z position of this position in the local coordinate frame */

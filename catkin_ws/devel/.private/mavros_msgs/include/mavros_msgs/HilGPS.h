@@ -194,7 +194,7 @@ struct Definition< ::mavros_msgs::HilGPS_<ContainerAllocator> >
 #\n\
 # ROS representation of MAVLink HIL_GPS\n\
 # See mavlink message documentation here:\n\
-# https://pixhawk.ethz.ch/mavlink/#HIL_GPS\n\
+# https://mavlink.io/en/messages/common.html#HIL_GPS\n\
 \n\
 std_msgs/Header header\n\
 uint8 fix_type\n\

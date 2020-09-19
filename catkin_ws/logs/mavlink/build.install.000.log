@@ -39,10 +39,12 @@
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/autoquad/autoquad.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/ASLUAV
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/ASLUAV/mavlink_msg_command_long_stamped.hpp
+-- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/ASLUAV/mavlink_msg_gsm_link_status.hpp
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/ASLUAV/mavlink_msg_sens_mppt.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/ASLUAV/mavlink_msg_aslctrl_debug.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/ASLUAV/mavlink_msg_fw_soaring_data.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/ASLUAV/testsuite.h
+-- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/ASLUAV/mavlink_msg_gsm_link_status.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/ASLUAV/ASLUAV.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/ASLUAV/mavlink_msg_sens_mppt.hpp
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/ASLUAV/mavlink_msg_sens_atmos.h
@@ -367,7 +369,9 @@
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_statustext.hpp
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_gps_raw_int.hpp
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_log_erase.h
+-- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_utm_global_position.hpp
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_servo_output_raw.hpp
+-- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_debug_float_array.hpp
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_logging_data.hpp
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_rc_channels.hpp
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_terrain_report.h
@@ -382,6 +386,7 @@
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_mission_set_current.hpp
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_change_operator_control_ack.hpp
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_global_vision_position_estimate.h
+-- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_cellular_status.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_param_request_read.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_auth_key.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_scaled_pressure3.h
@@ -398,7 +403,6 @@
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_scaled_imu2.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_heartbeat.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_mission_ack.hpp
--- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_set_video_stream_settings.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_button_change.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_vision_speed_estimate.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_param_ext_set.hpp
@@ -408,12 +412,14 @@
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_mission_request_list.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_adsb_vehicle.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_uavcan_node_info.h
+-- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_cellular_status.hpp
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_uavcan_node_status.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_terrain_check.hpp
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_mission_item_reached.hpp
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_vision_speed_estimate.hpp
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_param_value.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_vibration.h
+-- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_wheel_distance.hpp
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_play_tune.hpp
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_gps_input.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_obstacle_distance.h
@@ -431,6 +437,7 @@
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_sim_state.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_hil_gps.hpp
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_hil_optical_flow.h
+-- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_statustext_long.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_log_data.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_mission_item_int.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_home_position.h
@@ -464,6 +471,7 @@
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_serial_control.hpp
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_battery_status.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_global_position_int_cov.h
+-- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_video_stream_status.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_encapsulated_data.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_manual_setpoint.hpp
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_gps2_raw.hpp
@@ -487,6 +495,7 @@
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_distance_sensor.hpp
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_mount_orientation.hpp
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_safety_allowed_area.hpp
+-- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_debug_float_array.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_param_request_list.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_set_attitude_target.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_follow_target.h
@@ -509,6 +518,7 @@
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_param_map_rc.hpp
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_camera_information.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_param_ext_request_read.h
+-- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_utm_global_position.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_attitude_quaternion_cov.hpp
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_play_tune.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_safety_set_allowed_area.h
@@ -542,7 +552,6 @@
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_odometry.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_camera_information.hpp
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_gps_rtk.h
--- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_set_video_stream_settings.hpp
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_rc_channels.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_param_ext_value.hpp
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_autopilot_version.hpp
@@ -581,6 +590,7 @@
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_att_pos_mocap.hpp
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_att_pos_mocap.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_logging_data.h
+-- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_wheel_distance.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_video_stream_information.hpp
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_setup_signing.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_set_mode.h
@@ -600,7 +610,9 @@
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_collision.hpp
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_log_request_list.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_landing_target.hpp
+-- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_video_stream_status.hpp
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink.h
+-- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_orbit_execution_status.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_set_gps_global_origin.hpp
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_high_latency.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_data_stream.hpp
@@ -625,6 +637,7 @@
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_nav_controller_output.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_home_position.hpp
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_vicon_position_estimate.hpp
+-- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_orbit_execution_status.hpp
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_set_home_position.hpp
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_storage_information.hpp
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_scaled_imu3.hpp
@@ -648,6 +661,7 @@
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_file_transfer_protocol.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_collision.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_attitude_target.hpp
+-- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_statustext_long.hpp
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_power_status.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_vision_position_estimate.hpp
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v2.0/common/mavlink_msg_request_data_stream.h
@@ -726,6 +740,7 @@
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v1.0/ASLUAV/mavlink_msg_aslctrl_debug.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v1.0/ASLUAV/mavlink_msg_fw_soaring_data.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v1.0/ASLUAV/testsuite.h
+-- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v1.0/ASLUAV/mavlink_msg_gsm_link_status.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v1.0/ASLUAV/ASLUAV.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v1.0/ASLUAV/mavlink_msg_sens_atmos.h
 -- Installing: /home/poojith/catkin_ws/devel/include/mavlink/v1.0/ASLUAV/mavlink_msg_sensorpod_status.h

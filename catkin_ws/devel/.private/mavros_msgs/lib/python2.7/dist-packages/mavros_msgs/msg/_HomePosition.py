@@ -14,7 +14,7 @@ class HomePosition(genpy.Message):
   _type = "mavros_msgs/HomePosition"
   _has_header = True #flag to mark the presence of a Header object
   _full_text = """# MAVLink message: HOME_POSITION
-# http://mavlink.org/messages/common#HOME_POSITION
+# https://mavlink.io/en/messages/common.html#HOME_POSITION
 
 std_msgs/Header header
 

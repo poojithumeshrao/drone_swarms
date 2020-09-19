@@ -1,5 +1,5 @@
 set(_CATKIN_CURRENT_PACKAGE "mavros")
-set(mavros_VERSION "0.26.3")
+set(mavros_VERSION "0.29.0")
 set(mavros_MAINTAINER "Vladimir Ermakov <vooon341@gmail.com>")
 set(mavros_PACKAGE_FORMAT "2")
 set(mavros_BUILD_DEPENDS "eigen" "mavlink" "geographiclib" "geographiclib-tools" "angles" "cmake_modules" "boost" "diagnostic_updater" "eigen_conversions" "libmavconn" "pluginlib" "rosconsole_bridge" "roscpp" "tf2_ros" "tf2_eigen" "diagnostic_msgs" "geometry_msgs" "mavros_msgs" "nav_msgs" "sensor_msgs" "geographic_msgs" "std_msgs" "std_srvs")

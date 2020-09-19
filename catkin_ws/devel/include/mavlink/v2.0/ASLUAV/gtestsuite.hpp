@@ -917,8 +917,9 @@ TEST(ASLUAV, SENS_ATMOS)
     mavlink::MsgMap map2(msg);
 
     mavlink::ASLUAV::msg::SENS_ATMOS packet_in{};
-    packet_in.TempAmbient = 17.0;
-    packet_in.Humidity = 45.0;
+    packet_in.timestamp = 93372036854775807ULL;
+    packet_in.TempAmbient = 73.0;
+    packet_in.Humidity = 101.0;
 
     mavlink::ASLUAV::msg::SENS_ATMOS packet1{};
     mavlink::ASLUAV::msg::SENS_ATMOS packet2{};
@@ -933,6 +934,7 @@ TEST(ASLUAV, SENS_ATMOS)
 
     packet2.deserialize(map2);
 
+    EXPECT_EQ(packet1.timestamp, packet2.timestamp);
     EXPECT_EQ(packet1.TempAmbient, packet2.TempAmbient);
     EXPECT_EQ(packet1.Humidity, packet2.Humidity);
 }
@@ -946,12 +948,13 @@ TEST(ASLUAV_interop, SENS_ATMOS)
     memset(&msg, 0, sizeof(msg));
 
     mavlink_sens_atmos_t packet_c {
-         17.0, 45.0
+         93372036854775807ULL, 73.0, 101.0
     };
 
     mavlink::ASLUAV::msg::SENS_ATMOS packet_in{};
-    packet_in.TempAmbient = 17.0;
-    packet_in.Humidity = 45.0;
+    packet_in.timestamp = 93372036854775807ULL;
+    packet_in.TempAmbient = 73.0;
+    packet_in.Humidity = 101.0;
 
     mavlink::ASLUAV::msg::SENS_ATMOS packet2{};
 
@@ -964,6 +967,7 @@ TEST(ASLUAV_interop, SENS_ATMOS)
         packet2.deserialize(map2);
     } (&msg);
 
+    EXPECT_EQ(packet_in.timestamp, packet2.timestamp);
     EXPECT_EQ(packet_in.TempAmbient, packet2.TempAmbient);
     EXPECT_EQ(packet_in.Humidity, packet2.Humidity);
 
@@ -1426,6 +1430,89 @@ TEST(ASLUAV_interop, SENS_POWER_BOARD)
     EXPECT_EQ(packet_in.pwr_brd_digital_amp, packet2.pwr_brd_digital_amp);
     EXPECT_EQ(packet_in.pwr_brd_ext_amp, packet2.pwr_brd_ext_amp);
     EXPECT_EQ(packet_in.pwr_brd_aux_amp, packet2.pwr_brd_aux_amp);
+
+#ifdef PRINT_MSG
+    PRINT_MSG(msg);
+#endif
+}
+#endif
+
+TEST(ASLUAV, GSM_LINK_STATUS)
+{
+    mavlink::mavlink_message_t msg;
+    mavlink::MsgMap map1(msg);
+    mavlink::MsgMap map2(msg);
+
+    mavlink::ASLUAV::msg::GSM_LINK_STATUS packet_in{};
+    packet_in.timestamp = 93372036854775807ULL;
+    packet_in.gsm_modem_type = 29;
+    packet_in.gsm_link_type = 96;
+    packet_in.rssi = 163;
+    packet_in.rsrp_rscp = 230;
+    packet_in.sinr_ecio = 41;
+    packet_in.rsrq = 108;
+
+    mavlink::ASLUAV::msg::GSM_LINK_STATUS packet1{};
+    mavlink::ASLUAV::msg::GSM_LINK_STATUS packet2{};
+
+    packet1 = packet_in;
+
+    //std::cout << packet1.to_yaml() << std::endl;
+
+    packet1.serialize(map1);
+
+    mavlink::mavlink_finalize_message(&msg, 1, 1, packet1.MIN_LENGTH, packet1.LENGTH, packet1.CRC_EXTRA);
+
+    packet2.deserialize(map2);
+
+    EXPECT_EQ(packet1.timestamp, packet2.timestamp);
+    EXPECT_EQ(packet1.gsm_modem_type, packet2.gsm_modem_type);
+    EXPECT_EQ(packet1.gsm_link_type, packet2.gsm_link_type);
+    EXPECT_EQ(packet1.rssi, packet2.rssi);
+    EXPECT_EQ(packet1.rsrp_rscp, packet2.rsrp_rscp);
+    EXPECT_EQ(packet1.sinr_ecio, packet2.sinr_ecio);
+    EXPECT_EQ(packet1.rsrq, packet2.rsrq);
+}
+
+#ifdef TEST_INTEROP
+TEST(ASLUAV_interop, GSM_LINK_STATUS)
+{
+    mavlink_message_t msg;
+
+    // to get nice print
+    memset(&msg, 0, sizeof(msg));
+
+    mavlink_gsm_link_status_t packet_c {
+         93372036854775807ULL, 29, 96, 163, 230, 41, 108
+    };
+
+    mavlink::ASLUAV::msg::GSM_LINK_STATUS packet_in{};
+    packet_in.timestamp = 93372036854775807ULL;
+    packet_in.gsm_modem_type = 29;
+    packet_in.gsm_link_type = 96;
+    packet_in.rssi = 163;
+    packet_in.rsrp_rscp = 230;
+    packet_in.sinr_ecio = 41;
+    packet_in.rsrq = 108;
+
+    mavlink::ASLUAV::msg::GSM_LINK_STATUS packet2{};
+
+    mavlink_msg_gsm_link_status_encode(1, 1, &msg, &packet_c);
+
+    // simulate message-handling callback
+    [&packet2](const mavlink_message_t *cmsg) {
+        MsgMap map2(cmsg);
+
+        packet2.deserialize(map2);
+    } (&msg);
+
+    EXPECT_EQ(packet_in.timestamp, packet2.timestamp);
+    EXPECT_EQ(packet_in.gsm_modem_type, packet2.gsm_modem_type);
+    EXPECT_EQ(packet_in.gsm_link_type, packet2.gsm_link_type);
+    EXPECT_EQ(packet_in.rssi, packet2.rssi);
+    EXPECT_EQ(packet_in.rsrp_rscp, packet2.rsrp_rscp);
+    EXPECT_EQ(packet_in.sinr_ecio, packet2.sinr_ecio);
+    EXPECT_EQ(packet_in.rsrq, packet2.rsrq);
 
 #ifdef PRINT_MSG
     PRINT_MSG(msg);

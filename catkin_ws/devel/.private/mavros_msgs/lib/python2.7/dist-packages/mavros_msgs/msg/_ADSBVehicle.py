@@ -14,7 +14,7 @@ class ADSBVehicle(genpy.Message):
   _has_header = True #flag to mark the presence of a Header object
   _full_text = """# The location and information of an ADSB vehicle
 #
-# http://mavlink.org/messages/common#ADSB_VEHICLE
+# https://mavlink.io/en/messages/common.html#ADSB_VEHICLE
 
 # [[[cog:
 # from pymavlink.dialects.v20 import common

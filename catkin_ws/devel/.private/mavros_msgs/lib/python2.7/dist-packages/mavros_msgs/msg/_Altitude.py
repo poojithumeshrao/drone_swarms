@@ -13,7 +13,7 @@ class Altitude(genpy.Message):
   _has_header = True #flag to mark the presence of a Header object
   _full_text = """# Altitude information
 #
-# https://pixhawk.ethz.ch/mavlink/#ALTITUDE
+# https://mavlink.io/en/messages/common.html#ALTITUDE
 
 std_msgs/Header header
 

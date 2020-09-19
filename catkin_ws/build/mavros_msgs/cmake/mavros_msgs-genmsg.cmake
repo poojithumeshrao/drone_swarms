@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "mavros_msgs: 40 messages, 31 services")
+message(STATUS "mavros_msgs: 43 messages, 34 services")
 
 set(MSG_I_FLAGS "-Imavros_msgs:/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg;-Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg;-Isensor_msgs:/opt/ros/kinetic/share/sensor_msgs/cmake/../msg;-Igeographic_msgs:/opt/ros/kinetic/share/geographic_msgs/cmake/../msg;-Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg;-Iuuid_msgs:/opt/ros/kinetic/share/uuid_msgs/cmake/../msg")
 
@@ -22,14 +22,19 @@ add_custom_target(_mavros_msgs_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mavros_msgs" "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/StreamRate.srv" ""
 )
 
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/LogRequestData.srv" NAME_WE)
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Param.msg" NAME_WE)
 add_custom_target(_mavros_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mavros_msgs" "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/LogRequestData.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mavros_msgs" "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Param.msg" "mavros_msgs/ParamValue:std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/ParamPush.srv" NAME_WE)
 add_custom_target(_mavros_msgs_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mavros_msgs" "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/ParamPush.srv" ""
+)
+
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/HilActuatorControls.msg" NAME_WE)
+add_custom_target(_mavros_msgs_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mavros_msgs" "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/HilActuatorControls.msg" "std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Trajectory.msg" NAME_WE)
@@ -47,6 +52,16 @@ add_custom_target(_mavros_msgs_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mavros_msgs" "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileMakeDir.srv" ""
 )
 
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/CommandTriggerInterval.srv" NAME_WE)
+add_custom_target(_mavros_msgs_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mavros_msgs" "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/CommandTriggerInterval.srv" ""
+)
+
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/LogRequestData.srv" NAME_WE)
+add_custom_target(_mavros_msgs_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mavros_msgs" "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/LogRequestData.srv" ""
+)
+
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileChecksum.srv" NAME_WE)
 add_custom_target(_mavros_msgs_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mavros_msgs" "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileChecksum.srv" ""
@@ -62,14 +77,19 @@ add_custom_target(_mavros_msgs_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mavros_msgs" "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/ExtendedState.msg" "std_msgs/Header"
 )
 
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/CamIMUStamp.msg" NAME_WE)
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/RCOut.msg" NAME_WE)
 add_custom_target(_mavros_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mavros_msgs" "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/CamIMUStamp.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mavros_msgs" "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/RCOut.msg" "std_msgs/Header"
 )
 
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/HilActuatorControls.msg" NAME_WE)
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/MessageInterval.srv" NAME_WE)
 add_custom_target(_mavros_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mavros_msgs" "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/HilActuatorControls.msg" "std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mavros_msgs" "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/MessageInterval.srv" ""
+)
+
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/VehicleInfo.msg" NAME_WE)
+add_custom_target(_mavros_msgs_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mavros_msgs" "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/VehicleInfo.msg" "std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/SetMode.srv" NAME_WE)
@@ -122,9 +142,9 @@ add_custom_target(_mavros_msgs_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mavros_msgs" "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileWrite.srv" ""
 )
 
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileClose.srv" NAME_WE)
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/CompanionProcessStatus.msg" NAME_WE)
 add_custom_target(_mavros_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mavros_msgs" "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileClose.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mavros_msgs" "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/CompanionProcessStatus.msg" "std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Thrust.msg" NAME_WE)
@@ -172,11 +192,6 @@ add_custom_target(_mavros_msgs_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mavros_msgs" "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/LogEntry.msg" "std_msgs/Header"
 )
 
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/control.msg" NAME_WE)
-add_custom_target(_mavros_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mavros_msgs" "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/control.msg" "mavros_msgs/Waypoint"
-)
-
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileOpen.srv" NAME_WE)
 add_custom_target(_mavros_msgs_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mavros_msgs" "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileOpen.srv" ""
@@ -187,9 +202,9 @@ add_custom_target(_mavros_msgs_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mavros_msgs" "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/HilGPS.msg" "geographic_msgs/GeoPoint:std_msgs/Header"
 )
 
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileRename.srv" NAME_WE)
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/WheelOdomStamped.msg" NAME_WE)
 add_custom_target(_mavros_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mavros_msgs" "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileRename.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mavros_msgs" "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/WheelOdomStamped.msg" "std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/WaypointClear.srv" NAME_WE)
@@ -210,6 +225,11 @@ add_custom_target(_mavros_msgs_generate_messages_check_deps_${_filename}
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/LogData.msg" NAME_WE)
 add_custom_target(_mavros_msgs_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mavros_msgs" "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/LogData.msg" "std_msgs/Header"
+)
+
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/CamIMUStamp.msg" NAME_WE)
+add_custom_target(_mavros_msgs_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mavros_msgs" "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/CamIMUStamp.msg" ""
 )
 
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/TimesyncStatus.msg" NAME_WE)
@@ -265,6 +285,16 @@ add_custom_target(_mavros_msgs_generate_messages_check_deps_${_filename}
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/GlobalPositionTarget.msg" NAME_WE)
 add_custom_target(_mavros_msgs_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mavros_msgs" "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/GlobalPositionTarget.msg" "std_msgs/Header:geometry_msgs/Vector3"
+)
+
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/VehicleInfoGet.srv" NAME_WE)
+add_custom_target(_mavros_msgs_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mavros_msgs" "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/VehicleInfoGet.srv" "std_msgs/Header:mavros_msgs/VehicleInfo"
+)
+
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileRemoveDir.srv" NAME_WE)
+add_custom_target(_mavros_msgs_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mavros_msgs" "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileRemoveDir.srv" ""
 )
 
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Waypoint.msg" NAME_WE)
@@ -332,9 +362,9 @@ add_custom_target(_mavros_msgs_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mavros_msgs" "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileList.srv" "mavros_msgs/FileEntry"
 )
 
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/RCOut.msg" NAME_WE)
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileClose.srv" NAME_WE)
 add_custom_target(_mavros_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mavros_msgs" "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/RCOut.msg" "std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mavros_msgs" "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileClose.srv" ""
 )
 
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/WaypointPull.srv" NAME_WE)
@@ -347,9 +377,9 @@ add_custom_target(_mavros_msgs_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mavros_msgs" "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Mavlink.msg" "std_msgs/Header"
 )
 
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileRemoveDir.srv" NAME_WE)
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileRename.srv" NAME_WE)
 add_custom_target(_mavros_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mavros_msgs" "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileRemoveDir.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mavros_msgs" "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileRename.srv" ""
 )
 
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/WaypointList.msg" NAME_WE)
@@ -378,6 +408,12 @@ add_custom_target(_mavros_msgs_generate_messages_check_deps_${_filename}
 
 ### Section generating for lang: gencpp
 ### Generating Messages
+_generate_msg_cpp(mavros_msgs
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/VehicleInfo.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/mavros_msgs
+)
 _generate_msg_cpp(mavros_msgs
   "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Trajectory.msg"
   "${MSG_I_FLAGS}"
@@ -445,6 +481,12 @@ _generate_msg_cpp(mavros_msgs
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/mavros_msgs
 )
 _generate_msg_cpp(mavros_msgs
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/CompanionProcessStatus.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/mavros_msgs
+)
+_generate_msg_cpp(mavros_msgs
   "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Thrust.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
@@ -475,6 +517,12 @@ _generate_msg_cpp(mavros_msgs
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/mavros_msgs
 )
 _generate_msg_cpp(mavros_msgs
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/TimesyncStatus.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/mavros_msgs
+)
+_generate_msg_cpp(mavros_msgs
   "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/ADSBVehicle.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
@@ -487,15 +535,15 @@ _generate_msg_cpp(mavros_msgs
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/mavros_msgs
 )
 _generate_msg_cpp(mavros_msgs
-  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/control.msg"
-  "${MSG_I_FLAGS}"
-  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Waypoint.msg"
-  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/mavros_msgs
-)
-_generate_msg_cpp(mavros_msgs
   "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/HilGPS.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/kinetic/share/geographic_msgs/cmake/../msg/GeoPoint.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/mavros_msgs
+)
+_generate_msg_cpp(mavros_msgs
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/WheelOdomStamped.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/mavros_msgs
 )
 _generate_msg_cpp(mavros_msgs
@@ -517,9 +565,9 @@ _generate_msg_cpp(mavros_msgs
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/mavros_msgs
 )
 _generate_msg_cpp(mavros_msgs
-  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/TimesyncStatus.msg"
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Param.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/ParamValue.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/mavros_msgs
 )
 _generate_msg_cpp(mavros_msgs
@@ -657,6 +705,12 @@ _generate_srv_cpp(mavros_msgs
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/mavros_msgs
 )
 _generate_srv_cpp(mavros_msgs
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/MessageInterval.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/mavros_msgs
+)
+_generate_srv_cpp(mavros_msgs
   "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileMakeDir.srv"
   "${MSG_I_FLAGS}"
   ""
@@ -754,6 +808,18 @@ _generate_srv_cpp(mavros_msgs
 )
 _generate_srv_cpp(mavros_msgs
   "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/LogRequestList.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/mavros_msgs
+)
+_generate_srv_cpp(mavros_msgs
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/VehicleInfoGet.srv"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/VehicleInfo.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/mavros_msgs
+)
+_generate_srv_cpp(mavros_msgs
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/CommandTriggerInterval.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/mavros_msgs
@@ -821,9 +887,11 @@ add_dependencies(mavros_msgs_generate_messages mavros_msgs_generate_messages_cpp
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/StreamRate.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/LogRequestData.srv" NAME_WE)
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Param.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/ParamPush.srv" NAME_WE)
+add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/HilActuatorControls.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Trajectory.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_messages_check_deps_${_filename})
@@ -831,15 +899,21 @@ get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs
 add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileMakeDir.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/CommandTriggerInterval.srv" NAME_WE)
+add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/LogRequestData.srv" NAME_WE)
+add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileChecksum.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/HilSensor.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/ExtendedState.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/CamIMUStamp.msg" NAME_WE)
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/RCOut.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/HilActuatorControls.msg" NAME_WE)
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/MessageInterval.srv" NAME_WE)
+add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/VehicleInfo.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/SetMode.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_messages_check_deps_${_filename})
@@ -861,7 +935,7 @@ get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs
 add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileWrite.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileClose.srv" NAME_WE)
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/CompanionProcessStatus.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Thrust.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_messages_check_deps_${_filename})
@@ -881,13 +955,11 @@ get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs
 add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/LogEntry.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/control.msg" NAME_WE)
-add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileOpen.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/HilGPS.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileRename.srv" NAME_WE)
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/WheelOdomStamped.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/WaypointClear.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_messages_check_deps_${_filename})
@@ -896,6 +968,8 @@ add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_message
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/State.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/LogData.msg" NAME_WE)
+add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/CamIMUStamp.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/TimesyncStatus.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_messages_check_deps_${_filename})
@@ -918,6 +992,10 @@ add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_message
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/LogRequestList.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/GlobalPositionTarget.msg" NAME_WE)
+add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/VehicleInfoGet.srv" NAME_WE)
+add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileRemoveDir.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Waypoint.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_messages_check_deps_${_filename})
@@ -945,13 +1023,13 @@ get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs
 add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileList.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/RCOut.msg" NAME_WE)
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileClose.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/WaypointPull.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Mavlink.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileRemoveDir.srv" NAME_WE)
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileRename.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/WaypointList.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_cpp _mavros_msgs_generate_messages_check_deps_${_filename})
@@ -971,6 +1049,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS mavros_msgs_generate_messages_cpp)
 
 ### Section generating for lang: geneus
 ### Generating Messages
+_generate_msg_eus(mavros_msgs
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/VehicleInfo.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/mavros_msgs
+)
 _generate_msg_eus(mavros_msgs
   "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Trajectory.msg"
   "${MSG_I_FLAGS}"
@@ -1038,6 +1122,12 @@ _generate_msg_eus(mavros_msgs
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/mavros_msgs
 )
 _generate_msg_eus(mavros_msgs
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/CompanionProcessStatus.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/mavros_msgs
+)
+_generate_msg_eus(mavros_msgs
   "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Thrust.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
@@ -1068,6 +1158,12 @@ _generate_msg_eus(mavros_msgs
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/mavros_msgs
 )
 _generate_msg_eus(mavros_msgs
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/TimesyncStatus.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/mavros_msgs
+)
+_generate_msg_eus(mavros_msgs
   "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/ADSBVehicle.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
@@ -1080,15 +1176,15 @@ _generate_msg_eus(mavros_msgs
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/mavros_msgs
 )
 _generate_msg_eus(mavros_msgs
-  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/control.msg"
-  "${MSG_I_FLAGS}"
-  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Waypoint.msg"
-  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/mavros_msgs
-)
-_generate_msg_eus(mavros_msgs
   "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/HilGPS.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/kinetic/share/geographic_msgs/cmake/../msg/GeoPoint.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/mavros_msgs
+)
+_generate_msg_eus(mavros_msgs
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/WheelOdomStamped.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/mavros_msgs
 )
 _generate_msg_eus(mavros_msgs
@@ -1110,9 +1206,9 @@ _generate_msg_eus(mavros_msgs
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/mavros_msgs
 )
 _generate_msg_eus(mavros_msgs
-  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/TimesyncStatus.msg"
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Param.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/ParamValue.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/mavros_msgs
 )
 _generate_msg_eus(mavros_msgs
@@ -1250,6 +1346,12 @@ _generate_srv_eus(mavros_msgs
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/mavros_msgs
 )
 _generate_srv_eus(mavros_msgs
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/MessageInterval.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/mavros_msgs
+)
+_generate_srv_eus(mavros_msgs
   "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileMakeDir.srv"
   "${MSG_I_FLAGS}"
   ""
@@ -1347,6 +1449,18 @@ _generate_srv_eus(mavros_msgs
 )
 _generate_srv_eus(mavros_msgs
   "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/LogRequestList.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/mavros_msgs
+)
+_generate_srv_eus(mavros_msgs
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/VehicleInfoGet.srv"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/VehicleInfo.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/mavros_msgs
+)
+_generate_srv_eus(mavros_msgs
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/CommandTriggerInterval.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/mavros_msgs
@@ -1414,9 +1528,11 @@ add_dependencies(mavros_msgs_generate_messages mavros_msgs_generate_messages_eus
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/StreamRate.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/LogRequestData.srv" NAME_WE)
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Param.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/ParamPush.srv" NAME_WE)
+add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/HilActuatorControls.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Trajectory.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_messages_check_deps_${_filename})
@@ -1424,15 +1540,21 @@ get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs
 add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileMakeDir.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/CommandTriggerInterval.srv" NAME_WE)
+add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/LogRequestData.srv" NAME_WE)
+add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileChecksum.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/HilSensor.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/ExtendedState.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/CamIMUStamp.msg" NAME_WE)
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/RCOut.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/HilActuatorControls.msg" NAME_WE)
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/MessageInterval.srv" NAME_WE)
+add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/VehicleInfo.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/SetMode.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_messages_check_deps_${_filename})
@@ -1454,7 +1576,7 @@ get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs
 add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileWrite.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileClose.srv" NAME_WE)
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/CompanionProcessStatus.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Thrust.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_messages_check_deps_${_filename})
@@ -1474,13 +1596,11 @@ get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs
 add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/LogEntry.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/control.msg" NAME_WE)
-add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileOpen.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/HilGPS.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileRename.srv" NAME_WE)
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/WheelOdomStamped.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/WaypointClear.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_messages_check_deps_${_filename})
@@ -1489,6 +1609,8 @@ add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_message
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/State.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/LogData.msg" NAME_WE)
+add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/CamIMUStamp.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/TimesyncStatus.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_messages_check_deps_${_filename})
@@ -1511,6 +1633,10 @@ add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_message
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/LogRequestList.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/GlobalPositionTarget.msg" NAME_WE)
+add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/VehicleInfoGet.srv" NAME_WE)
+add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileRemoveDir.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Waypoint.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_messages_check_deps_${_filename})
@@ -1538,13 +1664,13 @@ get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs
 add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileList.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/RCOut.msg" NAME_WE)
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileClose.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/WaypointPull.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Mavlink.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileRemoveDir.srv" NAME_WE)
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileRename.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/WaypointList.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_eus _mavros_msgs_generate_messages_check_deps_${_filename})
@@ -1564,6 +1690,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS mavros_msgs_generate_messages_eus)
 
 ### Section generating for lang: genlisp
 ### Generating Messages
+_generate_msg_lisp(mavros_msgs
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/VehicleInfo.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/mavros_msgs
+)
 _generate_msg_lisp(mavros_msgs
   "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Trajectory.msg"
   "${MSG_I_FLAGS}"
@@ -1631,6 +1763,12 @@ _generate_msg_lisp(mavros_msgs
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/mavros_msgs
 )
 _generate_msg_lisp(mavros_msgs
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/CompanionProcessStatus.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/mavros_msgs
+)
+_generate_msg_lisp(mavros_msgs
   "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Thrust.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
@@ -1661,6 +1799,12 @@ _generate_msg_lisp(mavros_msgs
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/mavros_msgs
 )
 _generate_msg_lisp(mavros_msgs
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/TimesyncStatus.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/mavros_msgs
+)
+_generate_msg_lisp(mavros_msgs
   "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/ADSBVehicle.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
@@ -1673,15 +1817,15 @@ _generate_msg_lisp(mavros_msgs
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/mavros_msgs
 )
 _generate_msg_lisp(mavros_msgs
-  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/control.msg"
-  "${MSG_I_FLAGS}"
-  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Waypoint.msg"
-  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/mavros_msgs
-)
-_generate_msg_lisp(mavros_msgs
   "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/HilGPS.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/kinetic/share/geographic_msgs/cmake/../msg/GeoPoint.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/mavros_msgs
+)
+_generate_msg_lisp(mavros_msgs
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/WheelOdomStamped.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/mavros_msgs
 )
 _generate_msg_lisp(mavros_msgs
@@ -1703,9 +1847,9 @@ _generate_msg_lisp(mavros_msgs
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/mavros_msgs
 )
 _generate_msg_lisp(mavros_msgs
-  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/TimesyncStatus.msg"
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Param.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/ParamValue.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/mavros_msgs
 )
 _generate_msg_lisp(mavros_msgs
@@ -1843,6 +1987,12 @@ _generate_srv_lisp(mavros_msgs
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/mavros_msgs
 )
 _generate_srv_lisp(mavros_msgs
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/MessageInterval.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/mavros_msgs
+)
+_generate_srv_lisp(mavros_msgs
   "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileMakeDir.srv"
   "${MSG_I_FLAGS}"
   ""
@@ -1940,6 +2090,18 @@ _generate_srv_lisp(mavros_msgs
 )
 _generate_srv_lisp(mavros_msgs
   "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/LogRequestList.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/mavros_msgs
+)
+_generate_srv_lisp(mavros_msgs
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/VehicleInfoGet.srv"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/VehicleInfo.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/mavros_msgs
+)
+_generate_srv_lisp(mavros_msgs
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/CommandTriggerInterval.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/mavros_msgs
@@ -2007,9 +2169,11 @@ add_dependencies(mavros_msgs_generate_messages mavros_msgs_generate_messages_lis
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/StreamRate.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/LogRequestData.srv" NAME_WE)
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Param.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/ParamPush.srv" NAME_WE)
+add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/HilActuatorControls.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Trajectory.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messages_check_deps_${_filename})
@@ -2017,15 +2181,21 @@ get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs
 add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileMakeDir.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/CommandTriggerInterval.srv" NAME_WE)
+add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/LogRequestData.srv" NAME_WE)
+add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileChecksum.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/HilSensor.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/ExtendedState.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/CamIMUStamp.msg" NAME_WE)
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/RCOut.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/HilActuatorControls.msg" NAME_WE)
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/MessageInterval.srv" NAME_WE)
+add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/VehicleInfo.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/SetMode.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messages_check_deps_${_filename})
@@ -2047,7 +2217,7 @@ get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs
 add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileWrite.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileClose.srv" NAME_WE)
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/CompanionProcessStatus.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Thrust.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messages_check_deps_${_filename})
@@ -2067,13 +2237,11 @@ get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs
 add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/LogEntry.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/control.msg" NAME_WE)
-add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileOpen.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/HilGPS.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileRename.srv" NAME_WE)
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/WheelOdomStamped.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/WaypointClear.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messages_check_deps_${_filename})
@@ -2082,6 +2250,8 @@ add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messag
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/State.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/LogData.msg" NAME_WE)
+add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/CamIMUStamp.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/TimesyncStatus.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messages_check_deps_${_filename})
@@ -2104,6 +2274,10 @@ add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messag
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/LogRequestList.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/GlobalPositionTarget.msg" NAME_WE)
+add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/VehicleInfoGet.srv" NAME_WE)
+add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileRemoveDir.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Waypoint.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messages_check_deps_${_filename})
@@ -2131,13 +2305,13 @@ get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs
 add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileList.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/RCOut.msg" NAME_WE)
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileClose.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/WaypointPull.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Mavlink.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileRemoveDir.srv" NAME_WE)
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileRename.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/WaypointList.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_lisp _mavros_msgs_generate_messages_check_deps_${_filename})
@@ -2157,6 +2331,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS mavros_msgs_generate_messages_lisp)
 
 ### Section generating for lang: gennodejs
 ### Generating Messages
+_generate_msg_nodejs(mavros_msgs
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/VehicleInfo.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/mavros_msgs
+)
 _generate_msg_nodejs(mavros_msgs
   "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Trajectory.msg"
   "${MSG_I_FLAGS}"
@@ -2224,6 +2404,12 @@ _generate_msg_nodejs(mavros_msgs
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/mavros_msgs
 )
 _generate_msg_nodejs(mavros_msgs
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/CompanionProcessStatus.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/mavros_msgs
+)
+_generate_msg_nodejs(mavros_msgs
   "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Thrust.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
@@ -2254,6 +2440,12 @@ _generate_msg_nodejs(mavros_msgs
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/mavros_msgs
 )
 _generate_msg_nodejs(mavros_msgs
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/TimesyncStatus.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/mavros_msgs
+)
+_generate_msg_nodejs(mavros_msgs
   "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/ADSBVehicle.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
@@ -2266,15 +2458,15 @@ _generate_msg_nodejs(mavros_msgs
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/mavros_msgs
 )
 _generate_msg_nodejs(mavros_msgs
-  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/control.msg"
-  "${MSG_I_FLAGS}"
-  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Waypoint.msg"
-  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/mavros_msgs
-)
-_generate_msg_nodejs(mavros_msgs
   "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/HilGPS.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/kinetic/share/geographic_msgs/cmake/../msg/GeoPoint.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/mavros_msgs
+)
+_generate_msg_nodejs(mavros_msgs
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/WheelOdomStamped.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/mavros_msgs
 )
 _generate_msg_nodejs(mavros_msgs
@@ -2296,9 +2488,9 @@ _generate_msg_nodejs(mavros_msgs
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/mavros_msgs
 )
 _generate_msg_nodejs(mavros_msgs
-  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/TimesyncStatus.msg"
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Param.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/ParamValue.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/mavros_msgs
 )
 _generate_msg_nodejs(mavros_msgs
@@ -2436,6 +2628,12 @@ _generate_srv_nodejs(mavros_msgs
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/mavros_msgs
 )
 _generate_srv_nodejs(mavros_msgs
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/MessageInterval.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/mavros_msgs
+)
+_generate_srv_nodejs(mavros_msgs
   "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileMakeDir.srv"
   "${MSG_I_FLAGS}"
   ""
@@ -2533,6 +2731,18 @@ _generate_srv_nodejs(mavros_msgs
 )
 _generate_srv_nodejs(mavros_msgs
   "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/LogRequestList.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/mavros_msgs
+)
+_generate_srv_nodejs(mavros_msgs
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/VehicleInfoGet.srv"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/VehicleInfo.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/mavros_msgs
+)
+_generate_srv_nodejs(mavros_msgs
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/CommandTriggerInterval.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/mavros_msgs
@@ -2600,9 +2810,11 @@ add_dependencies(mavros_msgs_generate_messages mavros_msgs_generate_messages_nod
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/StreamRate.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/LogRequestData.srv" NAME_WE)
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Param.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/ParamPush.srv" NAME_WE)
+add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/HilActuatorControls.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Trajectory.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_messages_check_deps_${_filename})
@@ -2610,15 +2822,21 @@ get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs
 add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileMakeDir.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/CommandTriggerInterval.srv" NAME_WE)
+add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/LogRequestData.srv" NAME_WE)
+add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileChecksum.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/HilSensor.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/ExtendedState.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/CamIMUStamp.msg" NAME_WE)
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/RCOut.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/HilActuatorControls.msg" NAME_WE)
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/MessageInterval.srv" NAME_WE)
+add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/VehicleInfo.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/SetMode.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_messages_check_deps_${_filename})
@@ -2640,7 +2858,7 @@ get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs
 add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileWrite.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileClose.srv" NAME_WE)
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/CompanionProcessStatus.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Thrust.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_messages_check_deps_${_filename})
@@ -2660,13 +2878,11 @@ get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs
 add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/LogEntry.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/control.msg" NAME_WE)
-add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileOpen.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/HilGPS.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileRename.srv" NAME_WE)
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/WheelOdomStamped.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/WaypointClear.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_messages_check_deps_${_filename})
@@ -2675,6 +2891,8 @@ add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_mess
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/State.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/LogData.msg" NAME_WE)
+add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/CamIMUStamp.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/TimesyncStatus.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_messages_check_deps_${_filename})
@@ -2697,6 +2915,10 @@ add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_mess
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/LogRequestList.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/GlobalPositionTarget.msg" NAME_WE)
+add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/VehicleInfoGet.srv" NAME_WE)
+add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileRemoveDir.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Waypoint.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_messages_check_deps_${_filename})
@@ -2724,13 +2946,13 @@ get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs
 add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileList.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/RCOut.msg" NAME_WE)
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileClose.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/WaypointPull.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Mavlink.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileRemoveDir.srv" NAME_WE)
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileRename.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/WaypointList.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_nodejs _mavros_msgs_generate_messages_check_deps_${_filename})
@@ -2750,6 +2972,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS mavros_msgs_generate_messages_nodej
 
 ### Section generating for lang: genpy
 ### Generating Messages
+_generate_msg_py(mavros_msgs
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/VehicleInfo.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/mavros_msgs
+)
 _generate_msg_py(mavros_msgs
   "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Trajectory.msg"
   "${MSG_I_FLAGS}"
@@ -2817,6 +3045,12 @@ _generate_msg_py(mavros_msgs
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/mavros_msgs
 )
 _generate_msg_py(mavros_msgs
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/CompanionProcessStatus.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/mavros_msgs
+)
+_generate_msg_py(mavros_msgs
   "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Thrust.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
@@ -2847,6 +3081,12 @@ _generate_msg_py(mavros_msgs
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/mavros_msgs
 )
 _generate_msg_py(mavros_msgs
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/TimesyncStatus.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/mavros_msgs
+)
+_generate_msg_py(mavros_msgs
   "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/ADSBVehicle.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
@@ -2859,15 +3099,15 @@ _generate_msg_py(mavros_msgs
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/mavros_msgs
 )
 _generate_msg_py(mavros_msgs
-  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/control.msg"
-  "${MSG_I_FLAGS}"
-  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Waypoint.msg"
-  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/mavros_msgs
-)
-_generate_msg_py(mavros_msgs
   "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/HilGPS.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/kinetic/share/geographic_msgs/cmake/../msg/GeoPoint.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/mavros_msgs
+)
+_generate_msg_py(mavros_msgs
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/WheelOdomStamped.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/mavros_msgs
 )
 _generate_msg_py(mavros_msgs
@@ -2889,9 +3129,9 @@ _generate_msg_py(mavros_msgs
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/mavros_msgs
 )
 _generate_msg_py(mavros_msgs
-  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/TimesyncStatus.msg"
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Param.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/ParamValue.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/mavros_msgs
 )
 _generate_msg_py(mavros_msgs
@@ -3029,6 +3269,12 @@ _generate_srv_py(mavros_msgs
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/mavros_msgs
 )
 _generate_srv_py(mavros_msgs
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/MessageInterval.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/mavros_msgs
+)
+_generate_srv_py(mavros_msgs
   "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileMakeDir.srv"
   "${MSG_I_FLAGS}"
   ""
@@ -3131,6 +3377,18 @@ _generate_srv_py(mavros_msgs
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/mavros_msgs
 )
 _generate_srv_py(mavros_msgs
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/VehicleInfoGet.srv"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/VehicleInfo.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/mavros_msgs
+)
+_generate_srv_py(mavros_msgs
+  "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/CommandTriggerInterval.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/mavros_msgs
+)
+_generate_srv_py(mavros_msgs
   "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileClose.srv"
   "${MSG_I_FLAGS}"
   ""
@@ -3193,9 +3451,11 @@ add_dependencies(mavros_msgs_generate_messages mavros_msgs_generate_messages_py)
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/StreamRate.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/LogRequestData.srv" NAME_WE)
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Param.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/ParamPush.srv" NAME_WE)
+add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/HilActuatorControls.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Trajectory.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages_check_deps_${_filename})
@@ -3203,15 +3463,21 @@ get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs
 add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileMakeDir.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/CommandTriggerInterval.srv" NAME_WE)
+add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/LogRequestData.srv" NAME_WE)
+add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileChecksum.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/HilSensor.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/ExtendedState.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/CamIMUStamp.msg" NAME_WE)
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/RCOut.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/HilActuatorControls.msg" NAME_WE)
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/MessageInterval.srv" NAME_WE)
+add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/VehicleInfo.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/SetMode.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages_check_deps_${_filename})
@@ -3233,7 +3499,7 @@ get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs
 add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileWrite.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileClose.srv" NAME_WE)
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/CompanionProcessStatus.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Thrust.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages_check_deps_${_filename})
@@ -3253,13 +3519,11 @@ get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs
 add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/LogEntry.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/control.msg" NAME_WE)
-add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileOpen.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/HilGPS.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileRename.srv" NAME_WE)
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/WheelOdomStamped.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/WaypointClear.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages_check_deps_${_filename})
@@ -3268,6 +3532,8 @@ add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/State.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/LogData.msg" NAME_WE)
+add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/CamIMUStamp.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/TimesyncStatus.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages_check_deps_${_filename})
@@ -3290,6 +3556,10 @@ add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/LogRequestList.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/GlobalPositionTarget.msg" NAME_WE)
+add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/VehicleInfoGet.srv" NAME_WE)
+add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileRemoveDir.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Waypoint.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages_check_deps_${_filename})
@@ -3317,13 +3587,13 @@ get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs
 add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileList.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/RCOut.msg" NAME_WE)
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileClose.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/WaypointPull.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/Mavlink.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileRemoveDir.srv" NAME_WE)
+get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/srv/FileRename.srv" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/poojith/catkin_ws/src/mavros/mavros_msgs/msg/WaypointList.msg" NAME_WE)
 add_dependencies(mavros_msgs_generate_messages_py _mavros_msgs_generate_messages_check_deps_${_filename})

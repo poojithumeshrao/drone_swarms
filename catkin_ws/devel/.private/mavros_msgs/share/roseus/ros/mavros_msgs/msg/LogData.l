@@ -55,8 +55,8 @@
     (send _header :serialization-length)
     ;; uint16 _id
     2
-    ;; uint16 _offset
-    2
+    ;; uint32 _offset
+    4
     ;; uint8[] _data
     (* 1    (length _data)) 4
     ))
@@ -68,8 +68,8 @@
        (send _header :serialize s)
      ;; uint16 _id
        (write-word _id s)
-     ;; uint16 _offset
-       (write-word _offset s)
+     ;; uint32 _offset
+       (write-long _offset s)
      ;; uint8[] _data
      (write-long (length _data) s)
      (princ _data s)
@@ -81,8 +81,8 @@
      (send _header :deserialize buf ptr-) (incf ptr- (send _header :serialization-length))
    ;; uint16 _id
      (setq _id (sys::peek buf ptr- :short)) (incf ptr- 2)
-   ;; uint16 _offset
-     (setq _offset (sys::peek buf ptr- :short)) (incf ptr- 2)
+   ;; uint32 _offset
+     (setq _offset (sys::peek buf ptr- :integer)) (incf ptr- 4)
    ;; uint8[] _data
    (let ((n (sys::peek buf ptr- :integer))) (incf ptr- 4)
      (setq _data (make-array n :element-type :char))
@@ -91,7 +91,7 @@
    self)
   )
 
-(setf (get mavros_msgs::LogData :md5sum-) "14a66e2d37c1acdd20c8a2e9681ab562")
+(setf (get mavros_msgs::LogData :md5sum-) "ccaa27ba630f8f5d02c287763eb1e91b")
 (setf (get mavros_msgs::LogData :datatype-) "mavros_msgs/LogData")
 (setf (get mavros_msgs::LogData :definition-)
       "# Reply to LogRequestData, - a chunk of a log
@@ -103,7 +103,7 @@
 std_msgs/Header header
 
 uint16 id
-uint16 offset
+uint32 offset
 uint8[] data
 
 ================================================================================
@@ -128,6 +128,6 @@ string frame_id
 
 
 
-(provide :mavros_msgs/LogData "14a66e2d37c1acdd20c8a2e9681ab562")
+(provide :mavros_msgs/LogData "ccaa27ba630f8f5d02c287763eb1e91b")
 
 

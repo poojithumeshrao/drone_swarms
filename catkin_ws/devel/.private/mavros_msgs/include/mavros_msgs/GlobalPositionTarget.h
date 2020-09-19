@@ -235,6 +235,7 @@ struct Definition< ::mavros_msgs::GlobalPositionTarget_<ContainerAllocator> >
   {
     return "# Message for SET_POSITION_TARGET_GLOBAL_INT\n\
 #\n\
+# https://mavlink.io/en/messages/common.html#SET_POSITION_TARGET_GLOBAL_INT\n\
 # Some complex system requires all feautures that mavlink\n\
 # message provide. See issue #402, #415.\n\
 \n\

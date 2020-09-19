@@ -1,8 +1,0 @@
-prefix=/home/poojith/catkin_ws/install_isolated
-
-Name: pub_sub
-Description: Description of pub_sub
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/poojith/catkin_ws/install_isolated/lib 
-Requires: 

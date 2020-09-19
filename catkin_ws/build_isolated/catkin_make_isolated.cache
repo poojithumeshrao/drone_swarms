@@ -1,2 +1,0 @@
-controller:first_example:mavlink:mavros/libmavconn:mavros/mavros:mavros/mavros_extras:mavros/mavros_msgs:mavros/test_mavros:offb_ex:pub_sub
--G Unix Makefiles -DCATKIN_DEVEL_PREFIX=/home/poojith/catkin_ws/devel_isolated -DCMAKE_INSTALL_PREFIX=/home/poojith/catkin_ws/install_isolated

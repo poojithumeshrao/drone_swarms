@@ -1,8 +1,10 @@
 (cl:in-package mavros_msgs-srv)
 (cl:export '(TRIGGER_ENABLE-VAL
           TRIGGER_ENABLE
-          CYCLE_TIME-VAL
-          CYCLE_TIME
+          SEQUENCE_RESET-VAL
+          SEQUENCE_RESET
+          TRIGGER_PAUSE-VAL
+          TRIGGER_PAUSE
           SUCCESS-VAL
           SUCCESS
           RESULT-VAL

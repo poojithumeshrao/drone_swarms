@@ -8,7 +8,7 @@ import struct
 import std_msgs.msg
 
 class LogData(genpy.Message):
-  _md5sum = "14a66e2d37c1acdd20c8a2e9681ab562"
+  _md5sum = "ccaa27ba630f8f5d02c287763eb1e91b"
   _type = "mavros_msgs/LogData"
   _has_header = True #flag to mark the presence of a Header object
   _full_text = """# Reply to LogRequestData, - a chunk of a log
@@ -20,7 +20,7 @@ class LogData(genpy.Message):
 std_msgs/Header header
 
 uint16 id
-uint16 offset
+uint32 offset
 uint8[] data
 
 ================================================================================
@@ -42,7 +42,7 @@ time stamp
 string frame_id
 """
   __slots__ = ['header','id','offset','data']
-  _slot_types = ['std_msgs/Header','uint16','uint16','uint8[]']
+  _slot_types = ['std_msgs/Header','uint16','uint32','uint8[]']
 
   def __init__(self, *args, **kwds):
     """
@@ -96,7 +96,7 @@ string frame_id
         length = len(_x)
       buff.write(struct.pack('<I%ss'%length, length, _x))
       _x = self
-      buff.write(_get_struct_2H().pack(_x.id, _x.offset))
+      buff.write(_get_struct_HI().pack(_x.id, _x.offset))
       _x = self.data
       length = len(_x)
       # - if encoded as a list instead, serialize as bytes instead of string
@@ -131,8 +131,8 @@ string frame_id
         self.header.frame_id = str[start:end]
       _x = self
       start = end
-      end += 4
-      (_x.id, _x.offset,) = _get_struct_2H().unpack(str[start:end])
+      end += 6
+      (_x.id, _x.offset,) = _get_struct_HI().unpack(str[start:end])
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
@@ -160,7 +160,7 @@ string frame_id
         length = len(_x)
       buff.write(struct.pack('<I%ss'%length, length, _x))
       _x = self
-      buff.write(_get_struct_2H().pack(_x.id, _x.offset))
+      buff.write(_get_struct_HI().pack(_x.id, _x.offset))
       _x = self.data
       length = len(_x)
       # - if encoded as a list instead, serialize as bytes instead of string
@@ -196,8 +196,8 @@ string frame_id
         self.header.frame_id = str[start:end]
       _x = self
       start = end
-      end += 4
-      (_x.id, _x.offset,) = _get_struct_2H().unpack(str[start:end])
+      end += 6
+      (_x.id, _x.offset,) = _get_struct_HI().unpack(str[start:end])
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
@@ -218,9 +218,9 @@ def _get_struct_3I():
     if _struct_3I is None:
         _struct_3I = struct.Struct("<3I")
     return _struct_3I
-_struct_2H = None
-def _get_struct_2H():
-    global _struct_2H
-    if _struct_2H is None:
-        _struct_2H = struct.Struct("<2H")
-    return _struct_2H
+_struct_HI = None
+def _get_struct_HI():
+    global _struct_HI
+    if _struct_HI is None:
+        _struct_HI = struct.Struct("<HI")
+    return _struct_HI

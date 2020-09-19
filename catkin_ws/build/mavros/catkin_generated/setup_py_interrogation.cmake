@@ -1,4 +1,4 @@
-set(mavros_SETUP_PY_VERSION "0.26.3")
+set(mavros_SETUP_PY_VERSION "0.29.0")
 set(mavros_SETUP_PY_SCRIPTS "")
 set(mavros_SETUP_PY_PACKAGES "mavros")
 set(mavros_SETUP_PY_PACKAGE_DIRS "src/mavros")

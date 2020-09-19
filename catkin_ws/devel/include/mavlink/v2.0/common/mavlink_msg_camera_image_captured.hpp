@@ -24,7 +24,7 @@ struct CAMERA_IMAGE_CAPTURED : mavlink::Message {
     uint8_t camera_id; /*<  Camera ID (1 for first, 2 for second, etc.) */
     int32_t lat; /*< [degE7] Latitude where image was taken */
     int32_t lon; /*< [degE7] Longitude where capture was taken */
-    int32_t alt; /*< [mm] Altitude (AMSL) where image was taken */
+    int32_t alt; /*< [mm] Altitude (MSL) where image was taken */
     int32_t relative_alt; /*< [mm] Altitude above ground */
     std::array<float, 4> q; /*<  Quaternion of camera orientation (w, x, y, z order, zero-rotation is 0, 0, 0, 0) */
     int32_t image_index; /*<  Zero based index of this image (image count since armed -1) */

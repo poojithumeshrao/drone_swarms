@@ -185,7 +185,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libmavros.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libmavros.so"
-         OLD_RPATH "/home/poojith/catkin_ws/devel/.private/libmavconn/lib:/opt/ros/kinetic/lib:"
+         OLD_RPATH "/opt/ros/kinetic/lib:/home/poojith/catkin_ws/devel/.private/libmavconn/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libmavros.so")
@@ -205,7 +205,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libmavros_plugins.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libmavros_plugins.so"
-         OLD_RPATH "/home/poojith/catkin_ws/devel/.private/mavros/lib:/home/poojith/catkin_ws/devel/.private/libmavconn/lib:/opt/ros/kinetic/lib:"
+         OLD_RPATH "/home/poojith/catkin_ws/devel/.private/mavros/lib:/opt/ros/kinetic/lib:/home/poojith/catkin_ws/devel/.private/libmavconn/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libmavros_plugins.so")
@@ -225,7 +225,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/mavros/mavros_node")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/mavros/mavros_node"
-         OLD_RPATH "/home/poojith/catkin_ws/devel/.private/mavros/lib:/home/poojith/catkin_ws/devel/.private/libmavconn/lib:/opt/ros/kinetic/lib:"
+         OLD_RPATH "/home/poojith/catkin_ws/devel/.private/mavros/lib:/opt/ros/kinetic/lib:/home/poojith/catkin_ws/devel/.private/libmavconn/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/mavros/mavros_node")
@@ -245,7 +245,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/mavros/gcs_bridge")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/mavros/gcs_bridge"
-         OLD_RPATH "/home/poojith/catkin_ws/devel/.private/mavros/lib:/home/poojith/catkin_ws/devel/.private/libmavconn/lib:/opt/ros/kinetic/lib:"
+         OLD_RPATH "/home/poojith/catkin_ws/devel/.private/mavros/lib:/opt/ros/kinetic/lib:/home/poojith/catkin_ws/devel/.private/libmavconn/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/mavros/gcs_bridge")

@@ -9,7 +9,7 @@ namespace msg {
 /**
  * @brief WIND_COV message
  *
- * 
+ * Wind covariance estimate from vehicle.
  */
 struct WIND_COV : mavlink::Message {
     static constexpr msgid_t MSG_ID = 231;
@@ -25,7 +25,7 @@ struct WIND_COV : mavlink::Message {
     float wind_z; /*< [m/s] Wind in Z (NED) direction */
     float var_horiz; /*< [m/s] Variability of the wind in XY. RMS of a 1 Hz lowpassed wind estimate. */
     float var_vert; /*< [m/s] Variability of the wind in Z. RMS of a 1 Hz lowpassed wind estimate. */
-    float wind_alt; /*< [m] Altitude (AMSL) that this measurement was taken at */
+    float wind_alt; /*< [m] Altitude (MSL) that this measurement was taken at */
     float horiz_accuracy; /*< [m] Horizontal speed 1-STD accuracy */
     float vert_accuracy; /*< [m] Vertical speed 1-STD accuracy */
 

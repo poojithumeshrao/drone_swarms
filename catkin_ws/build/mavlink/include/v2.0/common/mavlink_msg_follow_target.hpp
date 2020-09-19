@@ -9,7 +9,7 @@ namespace msg {
 /**
  * @brief FOLLOW_TARGET message
  *
- * current motion information from a designated system
+ * Current motion information from a designated system
  */
 struct FOLLOW_TARGET : mavlink::Message {
     static constexpr msgid_t MSG_ID = 144;
@@ -23,7 +23,7 @@ struct FOLLOW_TARGET : mavlink::Message {
     uint8_t est_capabilities; /*<  bit positions for tracker reporting capabilities (POS = 0, VEL = 1, ACCEL = 2, ATT + RATES = 3) */
     int32_t lat; /*< [degE7] Latitude (WGS84) */
     int32_t lon; /*< [degE7] Longitude (WGS84) */
-    float alt; /*< [m] Altitude (AMSL) */
+    float alt; /*< [m] Altitude (MSL) */
     std::array<float, 3> vel; /*< [m/s] target velocity (0,0,0) for unknown */
     std::array<float, 3> acc; /*< [m/s/s] linear target acceleration (0,0,0) for unknown */
     std::array<float, 4> attitude_q; /*<  (1 0 0 0 for unknown) */

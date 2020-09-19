@@ -23,7 +23,7 @@ struct GPS2_RAW : mavlink::Message {
     uint8_t fix_type; /*<  GPS fix type. */
     int32_t lat; /*< [degE7] Latitude (WGS84) */
     int32_t lon; /*< [degE7] Longitude (WGS84) */
-    int32_t alt; /*< [mm] Altitude (AMSL). Positive for up. */
+    int32_t alt; /*< [mm] Altitude (MSL). Positive for up. */
     uint16_t eph; /*< [cm] GPS HDOP horizontal dilution of position. If unknown, set to: UINT16_MAX */
     uint16_t epv; /*< [cm] GPS VDOP vertical dilution of position. If unknown, set to: UINT16_MAX */
     uint16_t vel; /*< [cm/s] GPS ground speed. If unknown, set to: UINT16_MAX */

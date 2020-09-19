@@ -23,7 +23,7 @@ struct GLOBAL_POSITION_INT : mavlink::Message {
     uint32_t time_boot_ms; /*< [ms] Timestamp (time since system boot). */
     int32_t lat; /*< [degE7] Latitude, expressed */
     int32_t lon; /*< [degE7] Longitude, expressed */
-    int32_t alt; /*< [mm] Altitude (AMSL). Note that virtually all GPS modules provide both WGS84 and AMSL. */
+    int32_t alt; /*< [mm] Altitude (MSL). Note that virtually all GPS modules provide both WGS84 and MSL. */
     int32_t relative_alt; /*< [mm] Altitude above ground */
     int16_t vx; /*< [cm/s] Ground X Speed (Latitude, positive north) */
     int16_t vy; /*< [cm/s] Ground Y Speed (Longitude, positive east) */

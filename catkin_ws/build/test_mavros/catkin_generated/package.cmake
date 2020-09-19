@@ -1,5 +1,5 @@
 set(_CATKIN_CURRENT_PACKAGE "test_mavros")
-set(test_mavros_VERSION "0.26.3")
+set(test_mavros_VERSION "0.29.0")
 set(test_mavros_MAINTAINER "Vladimir Ermakov <vooon341@gmail.com>")
 set(test_mavros_PACKAGE_FORMAT "2")
 set(test_mavros_BUILD_DEPENDS "angles" "cmake_modules" "roscpp" "std_msgs" "geometry_msgs" "tf2_ros" "mavros" "mavros_extras" "eigen" "eigen_conversions" "control_toolbox")

@@ -33,7 +33,7 @@ struct COMMAND_INT_STAMPED : mavlink::Message {
     float param4; /*<  PARAM4, see MAV_CMD enum */
     int32_t x; /*<  PARAM5 / local: x position in meters * 1e4, global: latitude in degrees * 10^7 */
     int32_t y; /*<  PARAM6 / local: y position in meters * 1e4, global: longitude in degrees * 10^7 */
-    float z; /*<  PARAM7 / z position: global: altitude in meters (relative or absolute, depending on frame. */
+    float z; /*<  PARAM7 / z position: global: altitude in meters (MSL, WGS84, AGL or relative to home - depending on frame). */
 
 
     inline std::string get_name(void) const override

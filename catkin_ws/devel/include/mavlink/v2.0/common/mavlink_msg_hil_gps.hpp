@@ -24,7 +24,7 @@ struct HIL_GPS : mavlink::Message {
     uint8_t fix_type; /*<  0-1: no fix, 2: 2D fix, 3: 3D fix. Some applications will not use the value of this field unless it is at least two, so always correctly fill in the fix. */
     int32_t lat; /*< [degE7] Latitude (WGS84) */
     int32_t lon; /*< [degE7] Longitude (WGS84) */
-    int32_t alt; /*< [mm] Altitude (AMSL). Positive for up. */
+    int32_t alt; /*< [mm] Altitude (MSL). Positive for up. */
     uint16_t eph; /*< [cm] GPS HDOP horizontal dilution of position. If unknown, set to: 65535 */
     uint16_t epv; /*< [cm] GPS VDOP vertical dilution of position. If unknown, set to: 65535 */
     uint16_t vel; /*< [cm/s] GPS ground speed. If unknown, set to: 65535 */

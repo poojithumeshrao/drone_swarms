@@ -1,5 +1,5 @@
 set(_CATKIN_CURRENT_PACKAGE "mavros_msgs")
-set(mavros_msgs_VERSION "0.26.3")
+set(mavros_msgs_VERSION "0.29.0")
 set(mavros_msgs_MAINTAINER "Vladimir Ermakov <vooon341@gmail.com>")
 set(mavros_msgs_PACKAGE_FORMAT "2")
 set(mavros_msgs_BUILD_DEPENDS "message_generation" "std_msgs" "geometry_msgs" "sensor_msgs" "geographic_msgs")

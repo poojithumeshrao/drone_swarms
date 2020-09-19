@@ -25,11 +25,13 @@ struct CommandTriggerControlRequest_
 
   CommandTriggerControlRequest_()
     : trigger_enable(false)
-    , cycle_time(0.0)  {
+    , sequence_reset(false)
+    , trigger_pause(false)  {
     }
   CommandTriggerControlRequest_(const ContainerAllocator& _alloc)
     : trigger_enable(false)
-    , cycle_time(0.0)  {
+    , sequence_reset(false)
+    , trigger_pause(false)  {
   (void)_alloc;
     }
 
@@ -38,8 +40,11 @@ struct CommandTriggerControlRequest_
    typedef uint8_t _trigger_enable_type;
   _trigger_enable_type trigger_enable;
 
-   typedef float _cycle_time_type;
-  _cycle_time_type cycle_time;
+   typedef uint8_t _sequence_reset_type;
+  _sequence_reset_type sequence_reset;
+
+   typedef uint8_t _trigger_pause_type;
+  _trigger_pause_type trigger_pause;
 
 
 
@@ -119,12 +124,12 @@ struct MD5Sum< ::mavros_msgs::CommandTriggerControlRequest_<ContainerAllocator> 
 {
   static const char* value()
   {
-    return "e9392eb8721dabc9986be213994357de";
+    return "5231f3f21be52f9682a8e030770339a5";
   }
 
   static const char* value(const ::mavros_msgs::CommandTriggerControlRequest_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0xe9392eb8721dabc9ULL;
-  static const uint64_t static_value2 = 0x986be213994357deULL;
+  static const uint64_t static_value1 = 0x5231f3f21be52f96ULL;
+  static const uint64_t static_value2 = 0x82a8e030770339a5ULL;
 };
 
 template<class ContainerAllocator>
@@ -146,7 +151,8 @@ struct Definition< ::mavros_msgs::CommandTriggerControlRequest_<ContainerAllocat
     return "\n\
 \n\
 bool    trigger_enable\n\
-float32 cycle_time\n\
+bool    sequence_reset\n\
+bool    trigger_pause\n\
 ";
   }
 
@@ -166,7 +172,8 @@ namespace serialization
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
       stream.next(m.trigger_enable);
-      stream.next(m.cycle_time);
+      stream.next(m.sequence_reset);
+      stream.next(m.trigger_pause);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -187,8 +194,10 @@ struct Printer< ::mavros_msgs::CommandTriggerControlRequest_<ContainerAllocator>
   {
     s << indent << "trigger_enable: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.trigger_enable);
-    s << indent << "cycle_time: ";
-    Printer<float>::stream(s, indent + "  ", v.cycle_time);
+    s << indent << "sequence_reset: ";
+    Printer<uint8_t>::stream(s, indent + "  ", v.sequence_reset);
+    s << indent << "trigger_pause: ";
+    Printer<uint8_t>::stream(s, indent + "  ", v.trigger_pause);
   }
 };
 

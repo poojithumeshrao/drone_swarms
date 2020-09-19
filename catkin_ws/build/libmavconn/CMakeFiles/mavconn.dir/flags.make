@@ -6,5 +6,5 @@ CXX_FLAGS =  -std=c++14 -fPIC
 
 CXX_DEFINES = -Dmavconn_EXPORTS
 
-CXX_INCLUDES = -I/home/poojith/catkin_ws/src/mavros/libmavconn/include -I/home/poojith/catkin_ws/devel/include 
+CXX_INCLUDES = -I/home/poojith/catkin_ws/src/mavros/libmavconn/include -I/home/poojith/catkin_ws/build/libmavconn/catkin_generated/include -I/home/poojith/catkin_ws/devel/include 
 

@@ -22,7 +22,8 @@ class CommandTriggerControlRequest {
     if (initObj === null) {
       // initObj === null is a special case for deserialization where we don't initialize fields
       this.trigger_enable = null;
-      this.cycle_time = null;
+      this.sequence_reset = null;
+      this.trigger_pause = null;
     }
     else {
       if (initObj.hasOwnProperty('trigger_enable')) {
@@ -31,11 +32,17 @@ class CommandTriggerControlRequest {
       else {
         this.trigger_enable = false;
       }
-      if (initObj.hasOwnProperty('cycle_time')) {
-        this.cycle_time = initObj.cycle_time
+      if (initObj.hasOwnProperty('sequence_reset')) {
+        this.sequence_reset = initObj.sequence_reset
       }
       else {
-        this.cycle_time = 0.0;
+        this.sequence_reset = false;
+      }
+      if (initObj.hasOwnProperty('trigger_pause')) {
+        this.trigger_pause = initObj.trigger_pause
+      }
+      else {
+        this.trigger_pause = false;
       }
     }
   }
@@ -44,8 +51,10 @@ class CommandTriggerControlRequest {
     // Serializes a message object of type CommandTriggerControlRequest
     // Serialize message field [trigger_enable]
     bufferOffset = _serializer.bool(obj.trigger_enable, buffer, bufferOffset);
-    // Serialize message field [cycle_time]
-    bufferOffset = _serializer.float32(obj.cycle_time, buffer, bufferOffset);
+    // Serialize message field [sequence_reset]
+    bufferOffset = _serializer.bool(obj.sequence_reset, buffer, bufferOffset);
+    // Serialize message field [trigger_pause]
+    bufferOffset = _serializer.bool(obj.trigger_pause, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -55,13 +64,15 @@ class CommandTriggerControlRequest {
     let data = new CommandTriggerControlRequest(null);
     // Deserialize message field [trigger_enable]
     data.trigger_enable = _deserializer.bool(buffer, bufferOffset);
-    // Deserialize message field [cycle_time]
-    data.cycle_time = _deserializer.float32(buffer, bufferOffset);
+    // Deserialize message field [sequence_reset]
+    data.sequence_reset = _deserializer.bool(buffer, bufferOffset);
+    // Deserialize message field [trigger_pause]
+    data.trigger_pause = _deserializer.bool(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
-    return 5;
+    return 3;
   }
 
   static datatype() {
@@ -71,7 +82,7 @@ class CommandTriggerControlRequest {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return 'e9392eb8721dabc9986be213994357de';
+    return '5231f3f21be52f9682a8e030770339a5';
   }
 
   static messageDefinition() {
@@ -80,7 +91,8 @@ class CommandTriggerControlRequest {
     
     
     bool    trigger_enable
-    float32 cycle_time
+    bool    sequence_reset
+    bool    trigger_pause
     
     `;
   }
@@ -98,11 +110,18 @@ class CommandTriggerControlRequest {
       resolved.trigger_enable = false
     }
 
-    if (msg.cycle_time !== undefined) {
-      resolved.cycle_time = msg.cycle_time;
+    if (msg.sequence_reset !== undefined) {
+      resolved.sequence_reset = msg.sequence_reset;
     }
     else {
-      resolved.cycle_time = 0.0
+      resolved.sequence_reset = false
+    }
+
+    if (msg.trigger_pause !== undefined) {
+      resolved.trigger_pause = msg.trigger_pause;
+    }
+    else {
+      resolved.trigger_pause = false
     }
 
     return resolved;
@@ -203,6 +222,6 @@ class CommandTriggerControlResponse {
 module.exports = {
   Request: CommandTriggerControlRequest,
   Response: CommandTriggerControlResponse,
-  md5sum() { return '7036c5f362c09a051915015871ce633d'; },
+  md5sum() { return '65be46a6918cb61b7dceb7c9ba9b1c97'; },
   datatype() { return 'mavros_msgs/CommandTriggerControl'; }
 };

@@ -12,11 +12,16 @@
     :initarg :trigger_enable
     :type cl:boolean
     :initform cl:nil)
-   (cycle_time
-    :reader cycle_time
-    :initarg :cycle_time
-    :type cl:float
-    :initform 0.0))
+   (sequence_reset
+    :reader sequence_reset
+    :initarg :sequence_reset
+    :type cl:boolean
+    :initform cl:nil)
+   (trigger_pause
+    :reader trigger_pause
+    :initarg :trigger_pause
+    :type cl:boolean
+    :initform cl:nil))
 )
 
 (cl:defclass CommandTriggerControl-request (<CommandTriggerControl-request>)
@@ -32,28 +37,26 @@
   (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader mavros_msgs-srv:trigger_enable-val is deprecated.  Use mavros_msgs-srv:trigger_enable instead.")
   (trigger_enable m))
 
-(cl:ensure-generic-function 'cycle_time-val :lambda-list '(m))
-(cl:defmethod cycle_time-val ((m <CommandTriggerControl-request>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader mavros_msgs-srv:cycle_time-val is deprecated.  Use mavros_msgs-srv:cycle_time instead.")
-  (cycle_time m))
+(cl:ensure-generic-function 'sequence_reset-val :lambda-list '(m))
+(cl:defmethod sequence_reset-val ((m <CommandTriggerControl-request>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader mavros_msgs-srv:sequence_reset-val is deprecated.  Use mavros_msgs-srv:sequence_reset instead.")
+  (sequence_reset m))
+
+(cl:ensure-generic-function 'trigger_pause-val :lambda-list '(m))
+(cl:defmethod trigger_pause-val ((m <CommandTriggerControl-request>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader mavros_msgs-srv:trigger_pause-val is deprecated.  Use mavros_msgs-srv:trigger_pause instead.")
+  (trigger_pause m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <CommandTriggerControl-request>) ostream)
   "Serializes a message object of type '<CommandTriggerControl-request>"
   (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:if (cl:slot-value msg 'trigger_enable) 1 0)) ostream)
-  (cl:let ((bits (roslisp-utils:encode-single-float-bits (cl:slot-value msg 'cycle_time))))
-    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
-    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
-    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
-    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream))
+  (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:if (cl:slot-value msg 'sequence_reset) 1 0)) ostream)
+  (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:if (cl:slot-value msg 'trigger_pause) 1 0)) ostream)
 )
 (cl:defmethod roslisp-msg-protocol:deserialize ((msg <CommandTriggerControl-request>) istream)
   "Deserializes a message object of type '<CommandTriggerControl-request>"
     (cl:setf (cl:slot-value msg 'trigger_enable) (cl:not (cl:zerop (cl:read-byte istream))))
-    (cl:let ((bits 0))
-      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
-      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
-      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
-      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
-    (cl:setf (cl:slot-value msg 'cycle_time) (roslisp-utils:decode-single-float-bits bits)))
+    (cl:setf (cl:slot-value msg 'sequence_reset) (cl:not (cl:zerop (cl:read-byte istream))))
+    (cl:setf (cl:slot-value msg 'trigger_pause) (cl:not (cl:zerop (cl:read-byte istream))))
   msg
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<CommandTriggerControl-request>)))
@@ -64,26 +67,28 @@
   "mavros_msgs/CommandTriggerControlRequest")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<CommandTriggerControl-request>)))
   "Returns md5sum for a message object of type '<CommandTriggerControl-request>"
-  "7036c5f362c09a051915015871ce633d")
+  "65be46a6918cb61b7dceb7c9ba9b1c97")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'CommandTriggerControl-request)))
   "Returns md5sum for a message object of type 'CommandTriggerControl-request"
-  "7036c5f362c09a051915015871ce633d")
+  "65be46a6918cb61b7dceb7c9ba9b1c97")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<CommandTriggerControl-request>)))
   "Returns full string definition for message of type '<CommandTriggerControl-request>"
-  (cl:format cl:nil "~%~%bool    trigger_enable~%float32 cycle_time~%~%~%"))
+  (cl:format cl:nil "~%~%bool    trigger_enable~%bool    sequence_reset~%bool    trigger_pause~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'CommandTriggerControl-request)))
   "Returns full string definition for message of type 'CommandTriggerControl-request"
-  (cl:format cl:nil "~%~%bool    trigger_enable~%float32 cycle_time~%~%~%"))
+  (cl:format cl:nil "~%~%bool    trigger_enable~%bool    sequence_reset~%bool    trigger_pause~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <CommandTriggerControl-request>))
   (cl:+ 0
      1
-     4
+     1
+     1
 ))
 (cl:defmethod roslisp-msg-protocol:ros-message-to-list ((msg <CommandTriggerControl-request>))
   "Converts a ROS message object to a list"
   (cl:list 'CommandTriggerControl-request
     (cl:cons ':trigger_enable (trigger_enable msg))
-    (cl:cons ':cycle_time (cycle_time msg))
+    (cl:cons ':sequence_reset (sequence_reset msg))
+    (cl:cons ':trigger_pause (trigger_pause msg))
 ))
 ;//! \htmlinclude CommandTriggerControl-response.msg.html
 
@@ -136,10 +141,10 @@
   "mavros_msgs/CommandTriggerControlResponse")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<CommandTriggerControl-response>)))
   "Returns md5sum for a message object of type '<CommandTriggerControl-response>"
-  "7036c5f362c09a051915015871ce633d")
+  "65be46a6918cb61b7dceb7c9ba9b1c97")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'CommandTriggerControl-response)))
   "Returns md5sum for a message object of type 'CommandTriggerControl-response"
-  "7036c5f362c09a051915015871ce633d")
+  "65be46a6918cb61b7dceb7c9ba9b1c97")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<CommandTriggerControl-response>)))
   "Returns full string definition for message of type '<CommandTriggerControl-response>"
   (cl:format cl:nil "bool success~%uint8 result~%~%~%~%"))

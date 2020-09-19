@@ -5,4 +5,4 @@ PROJECT_CATKIN_DEPENDS = "diagnostic_msgs;diagnostic_updater;pluginlib;roscpp;se
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-lmavros;/usr/lib/x86_64-linux-gnu/libboost_system.so;/usr/lib/x86_64-linux-gnu/libGeographic.so".split(';') if "-lmavros;/usr/lib/x86_64-linux-gnu/libboost_system.so;/usr/lib/x86_64-linux-gnu/libGeographic.so" != "" else []
 PROJECT_NAME = "mavros"
 PROJECT_SPACE_DIR = "/home/poojith/catkin_ws/install"
-PROJECT_VERSION = "0.26.3"
+PROJECT_VERSION = "0.29.0"

@@ -13,7 +13,7 @@ class ExtendedState(genpy.Message):
   _has_header = True #flag to mark the presence of a Header object
   _full_text = """# Extended autopilot state
 #
-# http://mavlink.org/messages/common#EXTENDED_SYS_STATE
+# https://mavlink.io/en/messages/common.html#EXTENDED_SYS_STATE
 
 uint8 VTOL_STATE_UNDEFINED = 0
 uint8 VTOL_STATE_TRANSITION_TO_FW = 1

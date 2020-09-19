@@ -164,7 +164,7 @@ struct Definition< ::mavros_msgs::HomePosition_<ContainerAllocator> >
   static const char* value()
   {
     return "# MAVLink message: HOME_POSITION\n\
-# http://mavlink.org/messages/common#HOME_POSITION\n\
+# https://mavlink.io/en/messages/common.html#HOME_POSITION\n\
 \n\
 std_msgs/Header header\n\
 \n\

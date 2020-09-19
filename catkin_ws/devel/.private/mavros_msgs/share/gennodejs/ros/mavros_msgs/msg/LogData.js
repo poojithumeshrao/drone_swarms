@@ -59,7 +59,7 @@ class LogData {
     // Serialize message field [id]
     bufferOffset = _serializer.uint16(obj.id, buffer, bufferOffset);
     // Serialize message field [offset]
-    bufferOffset = _serializer.uint16(obj.offset, buffer, bufferOffset);
+    bufferOffset = _serializer.uint32(obj.offset, buffer, bufferOffset);
     // Serialize message field [data]
     bufferOffset = _arraySerializer.uint8(obj.data, buffer, bufferOffset, null);
     return bufferOffset;
@@ -74,7 +74,7 @@ class LogData {
     // Deserialize message field [id]
     data.id = _deserializer.uint16(buffer, bufferOffset);
     // Deserialize message field [offset]
-    data.offset = _deserializer.uint16(buffer, bufferOffset);
+    data.offset = _deserializer.uint32(buffer, bufferOffset);
     // Deserialize message field [data]
     data.data = _arrayDeserializer.uint8(buffer, bufferOffset, null)
     return data;
@@ -84,7 +84,7 @@ class LogData {
     let length = 0;
     length += std_msgs.msg.Header.getMessageSize(object.header);
     length += object.data.length;
-    return length + 8;
+    return length + 10;
   }
 
   static datatype() {
@@ -94,7 +94,7 @@ class LogData {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '14a66e2d37c1acdd20c8a2e9681ab562';
+    return 'ccaa27ba630f8f5d02c287763eb1e91b';
   }
 
   static messageDefinition() {
@@ -109,7 +109,7 @@ class LogData {
     std_msgs/Header header
     
     uint16 id
-    uint16 offset
+    uint32 offset
     uint8[] data
     
     ================================================================================

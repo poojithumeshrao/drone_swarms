@@ -170,7 +170,7 @@ struct Definition< ::mavros_msgs::State_<ContainerAllocator> >
 # http://wiki.ros.org/mavros/CustomModes\n\
 #\n\
 # For system_status values\n\
-# see http://mavlink.org/messages/common MAV_STATE\n\
+# see https://mavlink.io/en/messages/common.html#MAV_STATE\n\
 #\n\
 \n\
 std_msgs/Header header\n\

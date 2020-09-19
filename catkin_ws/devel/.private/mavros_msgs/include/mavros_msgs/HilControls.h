@@ -194,7 +194,7 @@ struct Definition< ::mavros_msgs::HilControls_<ContainerAllocator> >
 # ROS representation of MAVLink HIL_CONTROLS\n\
 # (deprecated, use HIL_ACTUATOR_CONTROLS instead)\n\
 # See mavlink message documentation here:\n\
-# https://pixhawk.ethz.ch/mavlink/#HIL_CONTROLS\n\
+# https://mavlink.io/en/messages/common.html#HIL_CONTROLS\n\
 \n\
 std_msgs/Header header\n\
 float32 roll_ailerons\n\

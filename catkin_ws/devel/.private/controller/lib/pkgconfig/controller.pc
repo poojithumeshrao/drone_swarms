@@ -1,8 +1,0 @@
-prefix=/home/poojith/catkin_ws/devel/.private/controller
-
-Name: controller
-Description: Description of controller
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/poojith/catkin_ws/devel/.private/controller/lib 
-Requires: mavros_msgs rospy std_msgs

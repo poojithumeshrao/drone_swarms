@@ -93,6 +93,4 @@
     (:file "_package_WaypointReached" :depends-on ("_package"))
     (:file "WheelOdomStamped" :depends-on ("_package_WheelOdomStamped"))
     (:file "_package_WheelOdomStamped" :depends-on ("_package"))
-    (:file "control" :depends-on ("_package_control"))
-    (:file "_package_control" :depends-on ("_package"))
   ))

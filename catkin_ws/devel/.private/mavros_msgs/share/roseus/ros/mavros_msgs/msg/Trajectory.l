@@ -178,7 +178,7 @@
 (setf (get mavros_msgs::Trajectory :datatype-) "mavros_msgs/Trajectory")
 (setf (get mavros_msgs::Trajectory :definition-)
       "# MAVLink message: TRAJECTORY
-# http://mavlink.org/messages/common#TRAJECTORY
+# https://mavlink.io/en/messages/common.html#TRAJECTORY
 
 std_msgs/Header header
 

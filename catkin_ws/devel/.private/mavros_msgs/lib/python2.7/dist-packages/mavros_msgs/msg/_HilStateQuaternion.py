@@ -17,7 +17,7 @@ class HilStateQuaternion(genpy.Message):
 #
 # ROS representation of MAVLink HIL_STATE_QUATERNION
 # See mavlink message documentation here:
-# https://pixhawk.ethz.ch/mavlink/#HIL_STATE_QUATERNION
+# https://mavlink.io/en/messages/common.html#HIL_STATE_QUATERNION
 
 std_msgs/Header header
 

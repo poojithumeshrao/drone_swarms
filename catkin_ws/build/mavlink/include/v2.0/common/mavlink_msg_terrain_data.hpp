@@ -23,7 +23,7 @@ struct TERRAIN_DATA : mavlink::Message {
     int32_t lon; /*< [degE7] Longitude of SW corner of first grid */
     uint16_t grid_spacing; /*< [m] Grid spacing */
     uint8_t gridbit; /*<  bit within the terrain request mask */
-    std::array<int16_t, 16> data; /*< [m] Terrain data AMSL */
+    std::array<int16_t, 16> data; /*< [m] Terrain data MSL */
 
 
     inline std::string get_name(void) const override

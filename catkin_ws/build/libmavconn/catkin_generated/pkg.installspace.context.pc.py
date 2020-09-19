@@ -5,4 +5,4 @@ PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-lmavconn;/usr/lib/x86_64-linux-gnu/libboost_system.so;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so".split(';') if "-lmavconn;/usr/lib/x86_64-linux-gnu/libboost_system.so;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so" != "" else []
 PROJECT_NAME = "libmavconn"
 PROJECT_SPACE_DIR = "/home/poojith/catkin_ws/install"
-PROJECT_VERSION = "0.26.3"
+PROJECT_VERSION = "0.29.0"

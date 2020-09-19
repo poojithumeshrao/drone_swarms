@@ -199,7 +199,7 @@ struct Definition< ::mavros_msgs::Trajectory_<ContainerAllocator> >
   static const char* value()
   {
     return "# MAVLink message: TRAJECTORY\n\
-# http://mavlink.org/messages/common#TRAJECTORY\n\
+# https://mavlink.io/en/messages/common.html#TRAJECTORY\n\
 \n\
 std_msgs/Header header\n\
 \n\

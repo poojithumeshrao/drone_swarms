@@ -23,10 +23,10 @@ struct SET_POSITION_TARGET_GLOBAL_INT : mavlink::Message {
     uint8_t target_system; /*<  System ID */
     uint8_t target_component; /*<  Component ID */
     uint8_t coordinate_frame; /*<  Valid options are: MAV_FRAME_GLOBAL_INT = 5, MAV_FRAME_GLOBAL_RELATIVE_ALT_INT = 6, MAV_FRAME_GLOBAL_TERRAIN_ALT_INT = 11 */
-    uint16_t type_mask; /*<  Bitmap to indicate which dimensions should be ignored by the vehicle: a value of 0b0000000000000000 or 0b0000001000000000 indicates that none of the setpoint dimensions should be ignored. If bit 10 is set the floats afx afy afz should be interpreted as force instead of acceleration. Mapping: bit 1: x, bit 2: y, bit 3: z, bit 4: vx, bit 5: vy, bit 6: vz, bit 7: ax, bit 8: ay, bit 9: az, bit 10: is force setpoint, bit 11: yaw, bit 12: yaw rate */
+    uint16_t type_mask; /*<  Bitmap to indicate which dimensions should be ignored by the vehicle. */
     int32_t lat_int; /*< [degE7] X Position in WGS84 frame */
     int32_t lon_int; /*< [degE7] Y Position in WGS84 frame */
-    float alt; /*< [m] Altitude (AMSL) if absolute or relative, above terrain if GLOBAL_TERRAIN_ALT_INT */
+    float alt; /*< [m] Altitude (MSL, Relative to home, or AGL - depending on frame) */
     float vx; /*< [m/s] X velocity in NED frame */
     float vy; /*< [m/s] Y velocity in NED frame */
     float vz; /*< [m/s] Z velocity in NED frame */

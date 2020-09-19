@@ -1,8 +1,0 @@
-prefix=/home/poojith/catkin_ws/devel_isolated/mavros_msgs
-
-Name: mavros_msgs
-Description: Description of mavros_msgs
-Version: 0.26.3
-Cflags: -I/home/poojith/catkin_ws/devel_isolated/mavros_msgs/include -I/home/poojith/catkin_ws/src/mavros/mavros_msgs/include
-Libs: -L/home/poojith/catkin_ws/devel_isolated/mavros_msgs/lib 
-Requires: geometry_msgs sensor_msgs geographic_msgs message_runtime std_msgs

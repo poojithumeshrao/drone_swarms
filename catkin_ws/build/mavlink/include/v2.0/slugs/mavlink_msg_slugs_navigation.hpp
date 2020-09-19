@@ -28,7 +28,7 @@ struct SLUGS_NAVIGATION : mavlink::Message {
     float dist2Go; /*<  Remaining distance to Run on this leg of Navigation */
     uint8_t fromWP; /*<  Origin WP */
     uint8_t toWP; /*<  Destination WP */
-    uint16_t h_c; /*< [dm] Commanded altitude */
+    uint16_t h_c; /*< [dm] Commanded altitude (MSL) */
 
 
     inline std::string get_name(void) const override

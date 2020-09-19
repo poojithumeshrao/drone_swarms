@@ -1,5 +1,5 @@
 set(_CATKIN_CURRENT_PACKAGE "libmavconn")
-set(libmavconn_VERSION "0.26.3")
+set(libmavconn_VERSION "0.29.0")
 set(libmavconn_MAINTAINER "Vladimir Ermakov <vooon341@gmail.com>")
 set(libmavconn_PACKAGE_FORMAT "2")
 set(libmavconn_BUILD_DEPENDS "boost" "mavlink" "libconsole-bridge-dev")

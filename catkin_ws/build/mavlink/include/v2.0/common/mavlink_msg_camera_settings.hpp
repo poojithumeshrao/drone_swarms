@@ -13,7 +13,7 @@ namespace msg {
  */
 struct CAMERA_SETTINGS : mavlink::Message {
     static constexpr msgid_t MSG_ID = 260;
-    static constexpr size_t LENGTH = 5;
+    static constexpr size_t LENGTH = 13;
     static constexpr size_t MIN_LENGTH = 5;
     static constexpr uint8_t CRC_EXTRA = 146;
     static constexpr auto NAME = "CAMERA_SETTINGS";
@@ -21,6 +21,8 @@ struct CAMERA_SETTINGS : mavlink::Message {
 
     uint32_t time_boot_ms; /*< [ms] Timestamp (time since system boot). */
     uint8_t mode_id; /*<  Camera mode */
+    float zoomLevel; /*<  Current zoom level (0.0 to 100.0, NaN if not known) */
+    float focusLevel; /*<  Current focus level (0.0 to 100.0, NaN if not known) */
 
 
     inline std::string get_name(void) const override
@@ -40,6 +42,8 @@ struct CAMERA_SETTINGS : mavlink::Message {
         ss << NAME << ":" << std::endl;
         ss << "  time_boot_ms: " << time_boot_ms << std::endl;
         ss << "  mode_id: " << +mode_id << std::endl;
+        ss << "  zoomLevel: " << zoomLevel << std::endl;
+        ss << "  focusLevel: " << focusLevel << std::endl;
 
         return ss.str();
     }
@@ -50,12 +54,16 @@ struct CAMERA_SETTINGS : mavlink::Message {
 
         map << time_boot_ms;                  // offset: 0
         map << mode_id;                       // offset: 4
+        map << zoomLevel;                     // offset: 5
+        map << focusLevel;                    // offset: 9
     }
 
     inline void deserialize(mavlink::MsgMap &map) override
     {
         map >> time_boot_ms;                  // offset: 0
         map >> mode_id;                       // offset: 4
+        map >> zoomLevel;                     // offset: 5
+        map >> focusLevel;                    // offset: 9
     }
 };
 

@@ -1,5 +1,0 @@
-first_example
-/home/poojith/catkin_ws/devel/.private/first_example/lib/first_example/first_example_node /home/poojith/catkin_ws/devel/lib/first_example/first_example_node
-/home/poojith/catkin_ws/devel/.private/first_example/lib/pkgconfig/first_example.pc /home/poojith/catkin_ws/devel/lib/pkgconfig/first_example.pc
-/home/poojith/catkin_ws/devel/.private/first_example/share/first_example/cmake/first_exampleConfig-version.cmake /home/poojith/catkin_ws/devel/share/first_example/cmake/first_exampleConfig-version.cmake
-/home/poojith/catkin_ws/devel/.private/first_example/share/first_example/cmake/first_exampleConfig.cmake /home/poojith/catkin_ws/devel/share/first_example/cmake/first_exampleConfig.cmake

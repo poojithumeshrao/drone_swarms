@@ -25,8 +25,8 @@ struct CAMERA_FEEDBACK : mavlink::Message {
     uint16_t img_idx; /*<  Image index. */
     int32_t lat; /*< [degE7] Latitude. */
     int32_t lng; /*< [degE7] Longitude. */
-    float alt_msl; /*< [m] Altitude Absolute (AMSL). */
-    float alt_rel; /*< [m] Altitude Relative (above HOME location). */
+    float alt_msl; /*< [m] Altitude (MSL). */
+    float alt_rel; /*< [m] Altitude (Relative to HOME location). */
     float roll; /*< [deg] Camera Roll angle (earth frame, +-180). */
     float pitch; /*< [deg] Camera Pitch angle (earth frame, +-180). */
     float yaw; /*< [deg] Camera Yaw (earth frame, 0-360, true). */

@@ -183,7 +183,7 @@ struct Definition< ::mavros_msgs::ExtendedState_<ContainerAllocator> >
   {
     return "# Extended autopilot state\n\
 #\n\
-# http://mavlink.org/messages/common#EXTENDED_SYS_STATE\n\
+# https://mavlink.io/en/messages/common.html#EXTENDED_SYS_STATE\n\
 \n\
 uint8 VTOL_STATE_UNDEFINED = 0\n\
 uint8 VTOL_STATE_TRANSITION_TO_FW = 1\n\

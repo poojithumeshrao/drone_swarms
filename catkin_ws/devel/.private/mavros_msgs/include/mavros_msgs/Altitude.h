@@ -171,7 +171,7 @@ struct Definition< ::mavros_msgs::Altitude_<ContainerAllocator> >
   {
     return "# Altitude information\n\
 #\n\
-# https://pixhawk.ethz.ch/mavlink/#ALTITUDE\n\
+# https://mavlink.io/en/messages/common.html#ALTITUDE\n\
 \n\
 std_msgs/Header header\n\
 \n\

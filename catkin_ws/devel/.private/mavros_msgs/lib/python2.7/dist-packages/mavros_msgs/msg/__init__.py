@@ -5,6 +5,7 @@ from ._AttitudeTarget import *
 from ._BatteryStatus import *
 from ._CamIMUStamp import *
 from ._CommandCode import *
+from ._CompanionProcessStatus import *
 from ._DebugValue import *
 from ._ExtendedState import *
 from ._FileEntry import *
@@ -21,6 +22,7 @@ from ._ManualControl import *
 from ._Mavlink import *
 from ._OpticalFlowRad import *
 from ._OverrideRCIn import *
+from ._Param import *
 from ._ParamValue import *
 from ._PositionTarget import *
 from ._RCIn import *
@@ -33,8 +35,9 @@ from ._Thrust import *
 from ._TimesyncStatus import *
 from ._Trajectory import *
 from ._VFR_HUD import *
+from ._VehicleInfo import *
 from ._Vibration import *
 from ._Waypoint import *
 from ._WaypointList import *
 from ._WaypointReached import *
-from ._control import *
+from ._WheelOdomStamped import *

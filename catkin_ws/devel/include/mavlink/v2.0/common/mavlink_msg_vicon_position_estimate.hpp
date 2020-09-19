@@ -9,7 +9,7 @@ namespace msg {
 /**
  * @brief VICON_POSITION_ESTIMATE message
  *
- * 
+ * Global position estimate from a Vicon motion system source.
  */
 struct VICON_POSITION_ESTIMATE : mavlink::Message {
     static constexpr msgid_t MSG_ID = 104;
